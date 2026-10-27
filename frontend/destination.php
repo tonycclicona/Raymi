@@ -4,7 +4,7 @@
  * Replaces overlays with full, standalone, SEO-rich subpages matching kuodatravel.com standard
  */
 
-require_once __DIR__ . '/../api/db.php';
+require_once __DIR__ . '/includes/db-loader.php';
 
 $slug = $_GET['slug'] ?? '';
 $dest = null;
@@ -293,7 +293,7 @@ function submitSidebarTourLead(e) {
     const formData = new FormData(form);
     const data = Object.fromEntries(formData.entries());
 
-    fetch('/api/leads', {
+    fetch((window.API_BASE || '/api') + '/leads', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data)

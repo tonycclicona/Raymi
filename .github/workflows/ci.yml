@@ -79,7 +79,30 @@ jobs:
             echo "has_credentials=true" >> $GITHUB_OUTPUT
           fi
 
-      - name: Sync Files to Hostinger Web Business via FTPS
+      - name: Build Targeted Production Distributions
+        run: |
+          echo "📦 Packaging targeted production artifacts..."
+          rm -rf dist
+          mkdir -p dist/api dist/frontend dist/admin
+
+          # 1. API: api.unu-raymi.com/public_html
+          cp -r api/* dist/api/
+          [ -f api/.htaccess ] && cp api/.htaccess dist/api/.htaccess
+          mkdir -p dist/api/database
+          cp -r database/data dist/api/database/
+          [ -f database/schema.sql ] && cp database/schema.sql dist/api/database/
+
+          # 2. Frontend: unu-raymi.com/public_html
+          cp -r frontend/* dist/frontend/
+          [ -f frontend/.htaccess ] && cp frontend/.htaccess dist/frontend/.htaccess
+
+          # 3. Admin: unu-raymi.com/public_html/admin
+          cp -r admin/* dist/admin/
+          [ -f admin/.htaccess ] && cp admin/.htaccess dist/admin/.htaccess
+
+          echo "✅ Production artifacts successfully packaged in dist/"
+
+      - name: Deploy API Module (api.unu-raymi.com)
         if: steps.check_credentials.outputs.has_credentials == 'true'
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
@@ -89,15 +112,34 @@ jobs:
           port: ${{ secrets.HOSTINGER_FTP_PORT || 21 }}
           protocol: ftps
           security: loose
-          server-dir: ${{ vars.HOSTINGER_SERVER_DIR || 'public_html/' }}
+          local-dir: dist/api/
+          server-dir: ${{ vars.HOSTINGER_API_DIR || 'domains/api.unu-raymi.com/public_html/' }}
           dangerous-clean-slate: false
-          exclude: |
-            **/.git*
-            **/.git*/**
-            **/.github/**
-            scripts/**
-            dev.sh
-            *.log
-            .server.pid
-            database/seed_*.py
-            README.md
+
+      - name: Deploy Frontend Web App (unu-raymi.com)
+        if: steps.check_credentials.outputs.has_credentials == 'true'
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.HOSTINGER_FTP_HOST }}
+          username: ${{ secrets.HOSTINGER_FTP_USER }}
+          password: ${{ secrets.HOSTINGER_FTP_PASSWORD }}
+          port: ${{ secrets.HOSTINGER_FTP_PORT || 21 }}
+          protocol: ftps
+          security: loose
+          local-dir: dist/frontend/
+          server-dir: ${{ vars.HOSTINGER_FRONTEND_DIR || 'domains/unu-raymi.com/public_html/' }}
+          dangerous-clean-slate: false
+
+      - name: Deploy Admin Panel (unu-raymi.com/admin)
+        if: steps.check_credentials.outputs.has_credentials == 'true'
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.HOSTINGER_FTP_HOST }}
+          username: ${{ secrets.HOSTINGER_FTP_USER }}
+          password: ${{ secrets.HOSTINGER_FTP_PASSWORD }}
+          port: ${{ secrets.HOSTINGER_FTP_PORT || 21 }}
+          protocol: ftps
+          security: loose
+          local-dir: dist/admin/
+          server-dir: ${{ vars.HOSTINGER_ADMIN_DIR || 'domains/unu-raymi.com/public_html/admin/' }}
+          dangerous-clean-slate: false

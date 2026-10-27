@@ -4,7 +4,7 @@
  * Multi-page navigation (links directly to subpages, zero overlays)
  */
 
-require_once __DIR__ . '/../api/db.php';
+require_once __DIR__ . '/includes/db-loader.php';
 
 $allTours = DB::getAll('tours');
 $allDests = DB::getAll('destinations');
@@ -543,7 +543,7 @@ function submitHomeDirectLead(e) {
         source: 'Homepage Bespoke Planner'
     };
 
-    fetch('/api/leads', {
+    fetch((window.API_BASE || '/api') + '/leads', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload)

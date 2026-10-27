@@ -5,7 +5,7 @@
  * Replicates Kuoda Travel's /destinations/peru/ structure and tour cards
  */
 
-require_once __DIR__ . '/../api/db.php';
+require_once __DIR__ . '/includes/db-loader.php';
 
 $countrySlug = strtolower($_GET['country'] ?? 'peru');
 
@@ -634,7 +634,7 @@ function submitCountryLead(e) {
         source: 'Destination Page: <?php echo htmlspecialchars($country['name']); ?>'
     };
 
-    fetch('/api/leads', {
+    fetch((window.API_BASE || '/api') + '/leads', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload)

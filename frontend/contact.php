@@ -187,7 +187,7 @@ function submitCustomJourneyLead(e) {
         source: 'Custom Journey Page (/custom-journey)'
     };
 
-    fetch('/api/leads', {
+    fetch((window.API_BASE || '/api') + '/leads', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload)

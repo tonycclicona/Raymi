@@ -4,7 +4,7 @@
  * Features Carousel view, List/Grid view, Country & Category filters, and "Load More Tours" button
  */
 
-require_once __DIR__ . '/../api/db.php';
+require_once __DIR__ . '/includes/db-loader.php';
 
 $allTours = DB::getAll('tours');
 $selectedCountry = strtolower($_GET['country'] ?? 'all');

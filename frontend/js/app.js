@@ -4,7 +4,7 @@
  */
 class App {
     constructor() {
-        this.apiBase = window.location.pathname.startsWith('/frontend') ? '../api/index.php' : '/api';
+        this.apiBase = window.API_BASE || (window.location.pathname.startsWith('/frontend') ? '../api/index.php' : '/api');
         this.tours = [];
         this.destinations = [];
         this.styles = [];

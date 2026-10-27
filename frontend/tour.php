@@ -12,7 +12,7 @@
  * 8. Related sample itineraries carousel
  */
 
-require_once __DIR__ . '/../api/db.php';
+require_once __DIR__ . '/includes/db-loader.php';
 
 $slug = $_GET['slug'] ?? '';
 $tour = DB::getBySlug('tours', $slug);
@@ -479,7 +479,7 @@ function submitTourDetailLead(e) {
     const data = Object.fromEntries(formData.entries());
     data.source = 'Tour Detail Page: ' + (data.tour_name || 'Generic');
 
-    fetch('/api/leads', {
+    fetch((window.API_BASE || '/api') + '/leads', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data)

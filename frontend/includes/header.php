@@ -27,6 +27,17 @@ $meta_desc = $meta_desc ?? 'Handcrafted ultra-luxury private journeys across Per
     
     <!-- Global Stylesheet -->
     <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Global API Configuration -->
+    <script>
+        window.API_BASE = (function() {
+            var host = window.location.hostname;
+            if (host === 'unu-raymi.com' || host === 'www.unu-raymi.com' || host.indexOf('unu-raymi.com') !== -1) {
+                return 'https://api.unu-raymi.com';
+            }
+            return '/api';
+        })();
+    </script>
 </head>
 <body class="page-<?php echo htmlspecialchars($current_page ?: 'home'); ?>">
 
