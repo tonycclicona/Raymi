@@ -82,24 +82,7 @@ jobs:
       - name: Build Targeted Production Distributions
         run: |
           echo "📦 Packaging targeted production artifacts..."
-          rm -rf dist
-          mkdir -p dist/api dist/frontend dist/admin
-
-          # 1. API: api.unu-raymi.com/public_html
-          cp -r api/* dist/api/
-          [ -f api/.htaccess ] && cp api/.htaccess dist/api/.htaccess
-          mkdir -p dist/api/database
-          cp -r database/data dist/api/database/
-          [ -f database/schema.sql ] && cp database/schema.sql dist/api/database/
-
-          # 2. Frontend: unu-raymi.com/public_html
-          cp -r frontend/* dist/frontend/
-          [ -f frontend/.htaccess ] && cp frontend/.htaccess dist/frontend/.htaccess
-
-          # 3. Admin: unu-raymi.com/public_html/admin
-          cp -r admin/* dist/admin/
-          [ -f admin/.htaccess ] && cp admin/.htaccess dist/admin/.htaccess
-
+          python3 scripts/build.py
           echo "✅ Production artifacts successfully packaged in dist/"
 
       - name: Deploy API Module (api.unu-raymi.com)
