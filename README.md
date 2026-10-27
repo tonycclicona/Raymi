@@ -68,17 +68,34 @@ php -S localhost:8000 router.php
 
 ---
 
-## 🌐 Despliegue en Hostinger Web Business
+---
 
-### Opción A: Dominio y Subdominio (Recomendada)
-1. **Frontend (`unu-raymi.com`):**
-   - Sube el contenido de `frontend/` a la raíz de tu dominio principal (`public_html/`).
-2. **Administrador (`admin.unu-raymi.com`):**
-   - En el panel de Hostinger (hPanel), crea el subdominio `admin.unu-raymi.com`.
-   - Asigna su carpeta raíz a `public_html/admin/` y sube los archivos de `admin/`.
-3. **API (`api/`):**
-   - Coloca la carpeta `api/` y `database/` en `public_html/api/` y `public_html/database/`.
-   - Ajusta los permisos de `database/data/` a `755` para permitir la escritura de JSON.
+## ⚡ Despliegue Continuo Automatizado (CI/CD con GitHub Actions)
+
+El repositorio incluye un flujo de trabajo automatizado en `.github/workflows/ci.yml` que valida la sintaxis PHP / integridad JSON y despliega automáticamente a **Hostinger Web Business** en cada `push` a la rama `main`:
+
+### Configuración de Secretos en GitHub:
+En tu repositorio de GitHub, ve a **Settings** > **Secrets and variables** > **Actions** y añade los siguientes **Repository Secrets**:
+
+| Secret | Descripción | Ejemplo |
+| :--- | :--- | :--- |
+| `HOSTINGER_FTP_HOST` | Host o IP del servidor FTP provisto por Hostinger | `ftp.tu-dominio.com` o `185.xxx.xxx.xxx` |
+| `HOSTINGER_FTP_USER` | Usuario de la cuenta FTP en hPanel | `u123456789@tu-dominio.com` |
+| `HOSTINGER_FTP_PASSWORD` | Contraseña asignada a la cuenta FTP | `TuPasswordSeguro123!` |
+
+*(Opcional)* En **Variables** (o Secrets) puedes definir:
+- `HOSTINGER_SERVER_DIR`: Ruta destino en Hostinger (por defecto `public_html/`).
+- `HOSTINGER_FTP_PORT`: Puerto FTP (por defecto `21`).
+
+---
+
+## 🌐 Despliegue Manual en Hostinger Web Business
+
+### Opción A: Despliegue Unificado con `.htaccess` (Recomendada)
+Sube todo el contenido a `public_html/`. El archivo `.htaccess` ya viene preconfigurado para enrutar automáticamente:
+- El **Frontend** en la raíz `/`
+- El **Admin** en `/admin`
+- La **API REST** en `/api`
 
 ### Opción B: Uso de Base de Datos MySQL (Opcional)
 Si prefieres usar MySQL en lugar del motor JSON nativo:
@@ -92,3 +109,4 @@ Si prefieres usar MySQL en lugar del motor JSON nativo:
    define('DB_USER', 'tu_usuario');
    define('DB_PASS', 'tu_contraseña');
    ```
+

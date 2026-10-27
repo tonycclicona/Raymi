@@ -1,0 +1,92 @@
+name: CI/CD Pipeline - Hostinger Web Business
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+concurrency:
+  group: production-deploy
+  cancel-in-progress: false
+
+jobs:
+  # =========================================================================
+  # 1. VALIDATION & CODE INTEGRITY CHECK (CI)
+  # =========================================================================
+  validate:
+    name: Lint & Validate Codebase
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Source Code
+        uses: actions/checkout@v4
+
+      - name: Setup PHP Environment
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          extensions: mbstring, json, pdo, pdo_mysql
+
+      - name: Syntax Lint Check (Frontend, Admin, API)
+        run: |
+          echo "🔍 Validating PHP syntax across all modules..."
+          ERRORS=0
+          for f in $(find . -type f -name "*.php" ! -path "*/.*/*" ! -path "./vendor/*"); do
+            php -l "$f" > /dev/null || { echo "❌ Syntax error in $f"; ERRORS=$((ERRORS + 1)); }
+          done
+          if [ $ERRORS -gt 0 ]; then
+            echo "❌ Validation failed: $ERRORS file(s) contain PHP syntax errors."
+            exit 1
+          fi
+          echo "✅ All PHP files passed syntax validation."
+
+      - name: Validate JSON Data Files
+        run: |
+          echo "🔍 Validating persistence JSON files..."
+          for j in database/data/*.json; do
+            if [ -f "$j" ]; then
+              python3 -m json.tool "$j" > /dev/null || { echo "❌ Invalid JSON in $j"; exit 1; }
+            fi
+          done
+          echo "✅ All database JSON files are well-formed."
+
+  # =========================================================================
+  # 2. PRODUCTION DEPLOYMENT TO HOSTINGER (CD)
+  # =========================================================================
+  deploy:
+    name: Deploy to Hostinger Production
+    needs: validate
+    if: (github.event_name == 'push' && github.ref == 'refs/heads/main') || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Source Code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Sync Files to Hostinger Web Business via FTPS
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.HOSTINGER_FTP_HOST }}
+          username: ${{ secrets.HOSTINGER_FTP_USER }}
+          password: ${{ secrets.HOSTINGER_FTP_PASSWORD }}
+          port: ${{ secrets.HOSTINGER_FTP_PORT || 21 }}
+          protocol: ftps
+          security: loose
+          server-dir: ${{ vars.HOSTINGER_SERVER_DIR || 'public_html/' }}
+          dangerous-clean-slate: false
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/.github/**
+            scripts/**
+            dev.sh
+            *.log
+            .server.pid
+            database/seed_*.py
+            README.md
