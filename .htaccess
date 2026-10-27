@@ -1,0 +1,32 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # Allow direct existing files and directories
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
+
+    # Admin router
+    RewriteRule ^admin/?$ admin/index.php [L,QSA]
+
+    # API router
+    RewriteRule ^api(/.*)?$ api/index.php [L,QSA]
+
+    # Clean URL routing for Unu Raymi Luxury Portal
+    RewriteRule ^$ frontend/index.php [L,QSA]
+    RewriteRule ^index(\.html|\.php)?$ frontend/index.php [L,QSA]
+    RewriteRule ^tours/?$ frontend/tours.php [L,QSA]
+    RewriteRule ^tour/([^/]+)/?$ frontend/tour.php?slug=$1 [L,QSA]
+    RewriteRule ^destinations/?$ frontend/destinations.php [L,QSA]
+    RewriteRule ^destinations?/(peru|chile|bolivia|ecuador|colombia|argentina)/?$ frontend/country.php?country=$1 [L,QSA]
+    RewriteRule ^destinations?/([^/]+)/?$ frontend/destination.php?slug=$1 [L,QSA]
+    RewriteRule ^destination/([^/]+)/?$ frontend/destination.php?slug=$1 [L,QSA]
+    RewriteRule ^(contact|contact-us|custom-journey)/?$ frontend/contact.php [L,QSA]
+    RewriteRule ^(about|about-us)/?$ frontend/about.php [L,QSA]
+    RewriteRule ^responsible-travel/?$ frontend/responsible-travel.php [L,QSA]
+
+    # Fallback for assets in frontend/
+    RewriteCond %{DOCUMENT_ROOT}/frontend/$1 -f
+    RewriteRule ^(.*)$ frontend/$1 [L]
+</IfModule>

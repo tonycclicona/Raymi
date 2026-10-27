@@ -1,0 +1,21 @@
+# Logs & Process IDs
+server.log
+.server.pid
+*.log
+
+# Operating System & Editors
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Python Cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Temporary IDE & Scratch files
+.tempmediaStorage/
+scratch/
