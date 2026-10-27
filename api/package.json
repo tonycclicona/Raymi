@@ -1,0 +1,10 @@
+{
+  "name": "@raymi/api",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Raymi Luxury Travel - RESTful API Web App",
+  "main": "index.php",
+  "scripts": {
+    "build": "echo 'API module ready'"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "@raymi/admin",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Raymi Luxury Travel - Admin CMS & CRM (PHP / HTML)",
+  "main": "index.php",
+  "scripts": {
+    "build": "echo 'Admin module ready'"
+  }
+}

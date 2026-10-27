@@ -111,7 +111,8 @@ function initLeadStatusUpdaters() {
             const newStatus = select.value;
 
             try {
-                const res = await fetch(`../api/index.php/leads/${leadId}`, {
+                const apiEndpoint = window.location.pathname.startsWith('/admin') ? `/api/leads/${leadId}` : `../api/index.php/leads/${leadId}`;
+                const res = await fetch(apiEndpoint, {
                     method: 'PUT',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ status: newStatus })

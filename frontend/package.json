@@ -1,0 +1,10 @@
+{
+  "name": "@raymi/frontend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Raymi Luxury Travel - Frontend Web Application (PHP / HTML)",
+  "main": "index.php",
+  "scripts": {
+    "build": "echo 'Frontend module ready'"
+  }
+}
