@@ -1,6 +1,6 @@
 /**
  * Unu Raymi - Unified Monorepo Production Build Script
- * Generates dist/ output with all entrypoints and modules for Hostinger Web Apps & Apache
+ * Generates clean dist/ output with all entrypoints and modules for Hostinger Web Apps & Apache
  */
 
 const fs = require('fs');
@@ -11,7 +11,6 @@ const DIST_DIR = path.join(ROOT_DIR, 'dist');
 
 console.log('[Build] Starting Unu Raymi Monorepo build...');
 
-// Helper to copy recursively
 function copyDirSync(src, dest) {
     if (!fs.existsSync(src)) return;
     fs.mkdirSync(dest, { recursive: true });
@@ -21,7 +20,7 @@ function copyDirSync(src, dest) {
         const srcPath = path.join(src, entry.name);
         const destPath = path.join(dest, entry.name);
 
-        if (entry.name === '.git' || entry.name === 'node_modules' || entry.name === 'dist') {
+        if (entry.name === '.git' || entry.name === 'node_modules' || entry.name === 'dist' || entry.name === '__pycache__') {
             continue;
         }
 
@@ -44,7 +43,6 @@ const targetApi = path.join(DIST_DIR, 'api');
 const targetFrontend = path.join(DIST_DIR, 'frontend');
 const targetAdmin = path.join(DIST_DIR, 'admin');
 
-// Copy modules
 copyDirSync(path.join(ROOT_DIR, 'api'), targetApi);
 copyDirSync(path.join(ROOT_DIR, 'frontend'), targetFrontend);
 copyDirSync(path.join(ROOT_DIR, 'admin'), targetAdmin);
@@ -56,13 +54,16 @@ if (fs.existsSync(dbDataSrc)) {
     copyDirSync(dbDataSrc, path.join(DIST_DIR, 'database', 'data'));
 }
 
-// 3. Populate root dist/ with full web application (for platforms syncing dist/ to public_html)
+// 3. Populate root dist/ with full frontend web app (for Web Apps syncing dist/ to public_html)
 copyDirSync(path.join(ROOT_DIR, 'frontend'), DIST_DIR);
-copyDirSync(path.join(ROOT_DIR, 'admin'), path.join(DIST_DIR, 'admin'));
-copyDirSync(path.join(ROOT_DIR, 'api'), path.join(DIST_DIR, 'api'));
 
-// Ensure entry files exist in dist root
-const entryFiles = ['server.js', 'package.json', 'index.php', 'router.php'];
+// Re-ensure admin, api, frontend are inside dist/
+copyDirSync(path.join(ROOT_DIR, 'admin'), targetAdmin);
+copyDirSync(path.join(ROOT_DIR, 'api'), targetApi);
+copyDirSync(path.join(ROOT_DIR, 'frontend'), targetFrontend);
+
+// 4. Ensure entry files exist in dist root
+const entryFiles = ['server.js', 'package.json', 'router.php'];
 for (const f of entryFiles) {
     const src = path.join(ROOT_DIR, f);
     if (fs.existsSync(src)) {
@@ -70,22 +71,12 @@ for (const f of entryFiles) {
     }
 }
 
-// Ensure .htaccess exists in dist root
+// Ensure frontend .htaccess is at dist root
 const frontendHtaccess = path.join(ROOT_DIR, 'frontend', '.htaccess');
 if (fs.existsSync(frontendHtaccess)) {
     fs.copyFileSync(frontendHtaccess, path.join(DIST_DIR, '.htaccess'));
 }
 
-// 4. Also structure domains directory for direct full-tree sync
-const domainsApi = path.join(DIST_DIR, 'domains', 'api.unu-raymi.com', 'public_html');
-const domainsFrontend = path.join(DIST_DIR, 'domains', 'unu-raymi.com', 'public_html');
-const domainsAdmin = path.join(domainsFrontend, 'admin');
-
-copyDirSync(targetApi, domainsApi);
-copyDirSync(targetFrontend, domainsFrontend);
-copyDirSync(targetAdmin, domainsAdmin);
-
-console.log('✅ [Build] Successfully generated complete distribution in dist/');
+console.log('✅ [Build] Successfully generated clean production distribution in dist/');
 console.log('   - Root entrypoints: server.js, index.php, package.json, router.php, .htaccess');
-console.log('   - Modules: dist/api, dist/frontend, dist/admin');
-console.log('   - Hostinger domains tree: dist/domains/...');
+console.log('   - Modules: dist/api/, dist/frontend/, dist/admin/');
