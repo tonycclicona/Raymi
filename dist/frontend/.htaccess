@@ -1,0 +1,67 @@
+# Unu Raymi - Luxury Travel Frontend (.htaccess)
+# Designed for Hostinger Web Business Apache Server
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # 1. Do not rewrite existing physical files or directories (like /admin, /css, /js, /assets)
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
+
+    # 2. Clean URLs: Tours Catalog
+    RewriteRule ^tours/?$ tours.php [L,QSA]
+
+    # 3. Clean URLs: Tour Detail (/tour/{slug} or /tours/{slug})
+    RewriteRule ^tours?/([a-zA-Z0-9_\-]+)/?$ tour.php?slug=$1 [L,QSA]
+
+    # 4. Clean URLs: Country Destination Page (/destinations/{country})
+    RewriteRule ^destinations?/(peru|chile|bolivia|ecuador|colombia|argentina)/?$ country.php?country=$1 [NC,L,QSA]
+
+    # 5. Clean URLs: Destinations Catalog
+    RewriteRule ^destinations/?$ destinations.php [L,QSA]
+
+    # 6. Clean URLs: Geographic Destination Detail (/destination/{slug} or /destinations/{slug})
+    RewriteRule ^destinations?/([a-zA-Z0-9_\-]+)/?$ destination.php?slug=$1 [L,QSA]
+
+    # 7. Clean URLs: Custom Journey Planner & Contact
+    RewriteRule ^(contact|contact-us|custom-journey|plan-your-trip)/?$ contact.php [L,QSA]
+
+    # 8. Clean URLs: About Us
+    RewriteRule ^(about|about-us|the-unu-raymi-difference)/?$ about.php [L,QSA]
+
+    # 9. Clean URLs: Responsible Travel
+    RewriteRule ^responsible-travel/?$ responsible-travel.php [L,QSA]
+
+    # 10. Fallback root
+    RewriteRule ^$ index.php [L]
+    RewriteRule ^index\.(html|php)$ index.php [L]
+</IfModule>
+
+# Security: Deny direct HTTP access to data and sensitive files
+<FilesMatch "\.(json|sql|log|env|git|md)">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order deny,allow
+        Deny from all
+    </IfModule>
+</FilesMatch>
+
+# Enable GZIP compression for ultra-fast performance
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json
+</IfModule>
+
+# Browser Caching for static assets
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/webp "access plus 1 month"
+    ExpiresByType image/jpeg "access plus 1 month"
+    ExpiresByType image/png "access plus 1 month"
+    ExpiresByType image/svg+xml "access plus 1 month"
+    ExpiresByType text/css "access plus 1 week"
+    ExpiresByType application/javascript "access plus 1 week"
+</IfModule>

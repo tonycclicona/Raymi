@@ -1,0 +1,107 @@
+[
+  {
+    "slug": "peru",
+    "name": "Perú",
+    "flag": "🇵🇪",
+    "tagline": "Cuna del Imperio Inca, Maravilla del Mundo & Capital Gastronómica",
+    "hero_image": "/assets/img/tours/peru.webp",
+    "card_image": "https://images.unsplash.com/photo-1587595431973-160d0d94add1?auto=format&fit=crop&w=800&q=80",
+    "overview": "Perú es el epicentro de la civilización andina y el destino insignia de Unu Raymi. Con sede de operaciones central en Cusco, ofrecemos acceso arqueológico VIP exclusivo a la ciudadela sagrada de Machu Picchu, travesías ferroviarias en el Belmond Hiram Bingham y el Belmond Andean Explorer, estancias en haciendas virreinales privadas en el Valle Sagrado y experiencias culinarias privadas en los restaurantes más premiados del planeta en Lima.",
+    "ideal_season": "Mayo a Octubre (Temporada seca y cielos despejados)",
+    "highlights": [
+      "Acceso arqueológico privado al amanecer en Machu Picchu con catedráticos historiadores",
+      "Tren Belmond Hiram Bingham con cena gourmet de autor y música andina en vivo",
+      "Villas privadas y glamping de ultra-lujo en el Valle Sagrado de los Incas",
+      "Ruta gastronómica exclusiva con mesas reservadas en Central (Mejor Restaurante del Mundo) y Maido",
+      "Crucero de expedición fluvial de ultralujo por la Reserva Nacional Pacaya Samiria en el Amazonas",
+      "Trekking Lodge-to-Lodge en el Salkantay y Camino Inca con campamentos de diseño"
+    ],
+    "image": "/assets/img/tours/peru.webp"
+  },
+  {
+    "slug": "chile",
+    "name": "Chile & Patagonia",
+    "flag": "🇨🇱",
+    "tagline": "Del Desierto Más Árido del Planeta a las Torres de Granito Australes",
+    "hero_image": "https://images.unsplash.com/photo-1527004013197-933c4bb611b3?auto=format&fit=crop&w=2000&q=80",
+    "card_image": "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=800&q=80",
+    "overview": "Chile despliega una geografía colosal de extremos poéticos. En el norte, los salares infinitos y cielos estelares prístinos de San Pedro de Atacama albergan los observatorios astronómicos privados más avanzados del mundo. Hacia el sur, la mítica Patagonia chilena deslumbra con los cuernos de granito de Torres del Paine y los campos de hielo milenarios, complementados por los viñedos de Carménère en Colchagua y el misticismo polinésico de Rapa Nui.",
+    "ideal_season": "Octubre a Abril (Patagonia) / Todo el año (Atacama)",
+    "highlights": [
+      "Observación astronómica privada con astrónomos residentes en el Desierto de Atacama",
+      "Expediciones de trekking guiado y navegación frente al Glaciar Grey en Torres del Paine",
+      "Lodges de diseño bioclimático de lujo: Tierra Atacama, Explora y Awasi Patagonia",
+      "Sobrevuelo privado y exploración arqueológica de los Moáis en Isla de Pascua (Rapa Nui)",
+      "Catas privadas en bodegas de autor en los valles vitivinícolas de Colchagua y Casablanca",
+      "Navegaciones por los fiordos australes y avistamiento de fauna patagónica protegida"
+    ]
+  },
+  {
+    "slug": "bolivia",
+    "name": "Bolivia",
+    "flag": "🇧🇴",
+    "tagline": "El Espejo Infinito del Salar de Uyuni & el Altiplano Místico",
+    "hero_image": "https://images.unsplash.com/photo-1518182170546-07661fd94144?auto=format&fit=crop&w=2000&q=80",
+    "card_image": "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=800&q=80",
+    "overview": "Bolivia es una de las fronteras más vírgenes y magnéticas de Sudamérica. El Salar de Uyuni, el desierto de sal continuo más extenso de la Tierra, se convierte durante la época de lluvias en un espejo celestial sin horizonte. Nuestros viajes privados combinan campamentos Airstream Deluxe sobre el salar, la riqueza virreinal de Sucre y Potosí, y la espiritualidad del Lago Titicaca desde la Isla del Sol.",
+    "ideal_season": "Mayo a Noviembre (Salar seco) / Enero a Marzo (Efecto espejo)",
+    "highlights": [
+      "Campers Airstream privados de lujo con chef propio en medio de la inmensidad del Salar de Uyuni",
+      "Ruta de las Lagunas de Colores (Colorada y Verde) con géiseres Sol de Mañana a 4,800 msnm",
+      "Travesía en catamarán privado por el Lago Titicaca hacia los santuarios sagrados de la Isla del Sol",
+      "Exploración arquitectónica y teleféricos panorámicos en La Paz con guías locales",
+      "Patrimonio colonial y colecciones de arte barroco andino en Sucre y Potosí"
+    ]
+  },
+  {
+    "slug": "ecuador",
+    "name": "Ecuador & Galápagos",
+    "flag": "🇪🇨",
+    "tagline": "El Archipiélago Encantado de Darwin & Bosques Nubosos de la Mitad del Mundo",
+    "hero_image": "https://images.unsplash.com/photo-1544979590-37e9b47eb705?auto=format&fit=crop&w=2000&q=80",
+    "card_image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "overview": "Ecuador condensa una biodiversidad planetaria sin igual en un territorio íntimo. Las Islas Galápagos ofrecen el mayor espectáculo de vida silvestre del mundo, recorrido en yates de expedición y catamaranes boutique de ultra-lujo. En el continente, la señorial Quito virreinal, el colosal volcán Cotopaxi y el santuario ecológico de Mashpi Lodge en el bosque nublado del Chocó andino garantizan un viaje inolvidable.",
+    "ideal_season": "Diciembre a Mayo (Galápagos aguas cálidas) / Junio a Septiembre (Sierra andina)",
+    "highlights": [
+      "Cruceros privados y yates de expedición de máximo lujo por las islas Galápagos",
+      "Snorkel con leones marinos, tortugas gigantes milenarias, pingüinos y tiburones martillo",
+      "Estadía exclusiva en Mashpi Lodge, reconocido entre los lodges más extraordinarios del mundo",
+      "Haciendas históricas coloniales al pie del Volcán Cotopaxi con cabalgatas privadas",
+      "Centro Histórico de Quito (Primer Patrimonio Cultural de la Humanidad UNESCO)"
+    ]
+  },
+  {
+    "slug": "colombia",
+    "name": "Colombia",
+    "flag": "🇨🇴",
+    "tagline": "Realismo Mágico, Casonas Coloniales en el Caribe & Paisaje Cafetero",
+    "hero_image": "https://images.unsplash.com/photo-1583531352515-8884af319dc1?auto=format&fit=crop&w=2000&q=80",
+    "card_image": "https://images.unsplash.com/photo-1518638150340-f706e86654de?auto=format&fit=crop&w=800&q=80",
+    "overview": "Colombia seduce con su calidez humana, vibrante paleta caribeña y naturaleza exuberante. Desde las murallas centenarias y casonas de época en Cartagena de Indias hasta las colinas onduladas del Eje Cafetero salpicadas por las palmas de cera gigantes del Valle de Cocora, diseñamos travesías privadas con islas caribeñas exclusivas y reservas ornitológicas de élite.",
+    "ideal_season": "Diciembre a Abril (Clima seco y festivales culturales)",
+    "highlights": [
+      "Alquiler de casonas coloniales privadas del siglo XVII con mayordomo en Cartagena de Indias",
+      "Islas del Rosario y Barú en yates privados con playas de aguas turquesas vírgenes",
+      "Fincas cafeteras de autor en el Quindío con catas sensoriales guiadas por baristas campeones",
+      "Senderismo privado entre las palmas de cera más altas del mundo en el Valle de Cocora",
+      "Parque Nacional Natural Tayrona con senderos selváticos que desembocan en el mar caribe"
+    ]
+  },
+  {
+    "slug": "argentina",
+    "name": "Argentina",
+    "flag": "🇦🇷",
+    "tagline": "Pasión Porteña, Viñedos de Malbec al Pie de los Andes & Glaciares del Fin del Mundo",
+    "hero_image": "https://images.unsplash.com/photo-1589556264800-08ae9e129a8c?auto=format&fit=crop&w=2000&q=80",
+    "card_image": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80",
+    "overview": "Argentina es sinónimo de sofisticación cosmopolita y paisajes sobrecogedores. En Buenos Aires, la cultura del tango, la arquitectura de inspiración parisina y los asados gourmet marcan el ritmo. En Mendoza, los viñedos de altura del Valle de Uco brindan los mejores Malbecs del planeta frente a los picos nevados del Aconcagua, mientras que en la Patagonia el imponente Glaciar Perito Moreno y las estancias de Ushuaia marcan el umbral del Fin del Mundo.",
+    "ideal_season": "Octubre a Abril (Patagonia y Mendoza) / Todo el año (Buenos Aires e Iguazú)",
+    "highlights": [
+      "Pasarelas exclusivas y navegación en yate privado frente a las paredes del Glaciar Perito Moreno",
+      "Wine resorts de lujo en Mendoza (The Vines of Mendoza / Cavas Wine Lodge) con enólogos de culto",
+      "Salón privado y cena clandestina en palacios aristocráticos de Recoleta en Buenos Aires",
+      "Navegación al pie de las colosales Cataratas de Iguazú con acceso VIP al Parque Nacional",
+      "Estancias tradicionales patagónicas con cabalgatas gauchas y asados a la cruz tradicionales"
+    ]
+  }
+]
