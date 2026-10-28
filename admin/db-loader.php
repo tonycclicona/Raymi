@@ -6,14 +6,15 @@
 
 if (!class_exists('DB')) {
     $searchPaths = [
-        // 1. Hostinger Web Business production path (api.unu-raymi.com)
-        '/home/u209525223/domains/api.unu-raymi.com/public_html/db.php',
-        dirname(__DIR__, 3) . '/api.unu-raymi.com/public_html/db.php',
-        dirname(__DIR__, 2) . '/api.unu-raymi.com/public_html/db.php',
-        // 2. Local development path (monorepo root)
+        // 1. Hostinger Web Business unified production path (unu-raymi.com)
+        '/home/u209525223/domains/unu-raymi.com/public_html/api/db.php',
+        ($_SERVER['DOCUMENT_ROOT'] ?? '') . '/api/db.php',
         dirname(__DIR__) . '/api/db.php',
+        // 2. Legacy / Subdomain path fallback
+        '/home/u209525223/domains/api.unu-raymi.com/public_html/db.php',
+        dirname(__DIR__, 2) . '/api.unu-raymi.com/public_html/db.php',
+        // 3. Local development path (monorepo root)
         __DIR__ . '/../api/db.php',
-        // 3. Fallback
         __DIR__ . '/api/db.php'
     ];
 

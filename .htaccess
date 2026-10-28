@@ -1,45 +1,107 @@
 # =============================================================================
-# Unu Raymi Monorepo - Hostinger Web Business Master Router & Security
+# Unu Raymi - Unified Production & Development Master Router
 # =============================================================================
 
-DirectoryIndex frontend/index.php index.php index.html
+DirectoryIndex index.php frontend/index.php
 
 <IfModule mod_rewrite.c>
     RewriteEngine On
     RewriteBase /
 
-    # 1. Block direct public HTTP access to database files
+    # 1. Block direct public HTTP access to sensitive and database files
     RewriteRule ^database(/.*)?$ - [F,L]
     RewriteRule ^\.git - [F,L]
     RewriteRule ^\.github - [F,L]
+    RewriteRule ^\.env - [F,L]
 
-    # 2. Allow existing physical files and directories
+    # 2. Allow existing physical files and directories directly
     RewriteCond %{REQUEST_FILENAME} -f [OR]
     RewriteCond %{REQUEST_FILENAME} -d
     RewriteRule ^ - [L]
 
-    # 3. Admin Module Routing (admin PHP/HTML)
+    # 3. Admin Module Routing (/admin/)
     RewriteRule ^admin/?$ admin/index.php [L,QSA]
     RewriteRule ^admin/(.*)$ admin/$1 [L,QSA]
 
-    # 4. API Web App Module Routing (RESTful API)
+    # 4. API Module Routing (/api/)
     RewriteRule ^api/?$ api/index.php [L,QSA]
     RewriteRule ^api/(.*)$ api/index.php [L,QSA]
 
-    # 5. Frontend Module Routing (frontend PHP/HTML)
-    RewriteRule ^$ frontend/index.php [L,QSA]
-    RewriteRule ^index(\.html|\.php)?$ frontend/index.php [L,QSA]
+    # 5. Tours Catalog
+    RewriteCond %{DOCUMENT_ROOT}/tours.php -f
+    RewriteRule ^tours/?$ tours.php [L,QSA]
     RewriteRule ^tours/?$ frontend/tours.php [L,QSA]
-    RewriteRule ^tour/([^/]+)/?$ frontend/tour.php?slug=$1 [L,QSA]
+
+    # 6. Tour Detail (/tour/{slug} or /tours/{slug})
+    RewriteCond %{DOCUMENT_ROOT}/tour.php -f
+    RewriteRule ^tours?/([a-zA-Z0-9_\-]+)/?$ tour.php?slug=$1 [L,QSA]
+    RewriteRule ^tours?/([a-zA-Z0-9_\-]+)/?$ frontend/tour.php?slug=$1 [L,QSA]
+
+    # 7. Country Destination (/destinations/{country})
+    RewriteCond %{DOCUMENT_ROOT}/country.php -f
+    RewriteRule ^destinations?/(peru|chile|bolivia|ecuador|colombia|argentina)/?$ country.php?country=$1 [NC,L,QSA]
+    RewriteRule ^destinations?/(peru|chile|bolivia|ecuador|colombia|argentina)/?$ frontend/country.php?country=$1 [NC,L,QSA]
+
+    # 8. Destinations Catalog
+    RewriteCond %{DOCUMENT_ROOT}/destinations.php -f
+    RewriteRule ^destinations/?$ destinations.php [L,QSA]
     RewriteRule ^destinations/?$ frontend/destinations.php [L,QSA]
-    RewriteRule ^destinations?/(peru|chile|bolivia|ecuador|colombia|argentina)/?$ frontend/country.php?country=$1 [L,QSA]
-    RewriteRule ^destinations?/([^/]+)/?$ frontend/destination.php?slug=$1 [L,QSA]
+
+    # 9. Geographic Destination Detail
+    RewriteCond %{DOCUMENT_ROOT}/destination.php -f
+    RewriteRule ^destinations?/([a-zA-Z0-9_\-]+)/?$ destination.php?slug=$1 [L,QSA]
+    RewriteRule ^destination/([^/]+)/?$ destination.php?slug=$1 [L,QSA]
+    RewriteRule ^destinations?/([a-zA-Z0-9_\-]+)/?$ frontend/destination.php?slug=$1 [L,QSA]
     RewriteRule ^destination/([^/]+)/?$ frontend/destination.php?slug=$1 [L,QSA]
+
+    # 10. Contact / Custom Journey Planner
+    RewriteCond %{DOCUMENT_ROOT}/contact.php -f
+    RewriteRule ^(contact|contact-us|custom-journey|plan-your-trip)/?$ contact.php [L,QSA]
     RewriteRule ^(contact|contact-us|custom-journey|plan-your-trip)/?$ frontend/contact.php [L,QSA]
+
+    # 11. About Us
+    RewriteCond %{DOCUMENT_ROOT}/about.php -f
+    RewriteRule ^(about|about-us|the-unu-raymi-difference)/?$ about.php [L,QSA]
     RewriteRule ^(about|about-us|the-unu-raymi-difference)/?$ frontend/about.php [L,QSA]
+
+    # 12. Responsible Travel
+    RewriteCond %{DOCUMENT_ROOT}/responsible-travel.php -f
+    RewriteRule ^responsible-travel/?$ responsible-travel.php [L,QSA]
     RewriteRule ^responsible-travel/?$ frontend/responsible-travel.php [L,QSA]
 
-    # 6. Fallback for static assets in frontend/ (css, js, images)
+    # 13. Homepage / Root fallback
+    RewriteCond %{DOCUMENT_ROOT}/index.php -f
+    RewriteRule ^$ index.php [L,QSA]
+    RewriteRule ^$ frontend/index.php [L,QSA]
+
+    # 14. Fallback for static assets in frontend/ (css, js, images) if referenced without /frontend
     RewriteCond %{DOCUMENT_ROOT}/frontend/$1 -f
     RewriteRule ^(.*)$ frontend/$1 [L]
+</IfModule>
+
+# Security: Deny direct HTTP access to data and sensitive files
+<FilesMatch "\.(json|sql|log|env|git|md)">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order deny,allow
+        Deny from all
+    </IfModule>
+</FilesMatch>
+
+# Enable GZIP compression for ultra-fast performance
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json
+</IfModule>
+
+# Browser Caching for static assets
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/webp "access plus 1 month"
+    ExpiresByType image/jpeg "access plus 1 month"
+    ExpiresByType image/png "access plus 1 month"
+    ExpiresByType image/svg+xml "access plus 1 month"
+    ExpiresByType text/css "access plus 1 week"
+    ExpiresByType application/javascript "access plus 1 week"
 </IfModule>

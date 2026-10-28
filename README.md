@@ -1,31 +1,46 @@
 # UNU RAYMI — Sistema Digital de Viajes de Lujo a Medida
 
-Portal web de ultralujo y sistema de gestión de contenidos (CMS/Admin) para **Unu Raymi** (`unu-raymi.com` y `admin.unu-raymi.com`), clonado y optimizado a partir de la ingeniería inversa de Kuoda Travel.
+Portal web de ultralujo y sistema de gestión de contenidos (CMS/Admin) para **Unu Raymi** (`unu-raymi.com`), clonado y optimizado a partir de la ingeniería inversa de Kuoda Travel.
 
 ---
 
-## 🏛️ Arquitectura del Sistema
+## 🏛️ Arquitectura del Sistema (Directorio Unificado)
 
-El proyecto está diseñado bajo un modelo de **cero costos recurrentes de licencias**, máxima velocidad, alta seguridad y compatibilidad directa con **Hostinger Web Business** (PHP 8.x + MySQL o JSON Storage):
+El proyecto está diseñado bajo un modelo de **cero costos recurrentes de licencias**, máxima velocidad, alta seguridad y compatibilidad directa con **Hostinger Web Business** (PHP 8.2 + Apache + JSON Storage / MySQL) en un **único directorio de despliegue**:
+
+* **Frontend:** Servido en la raíz `/` (`domains/unu-raymi.com/public_html/`)
+* **Admin CMS/CRM:** Servido en `/admin/` (`domains/unu-raymi.com/public_html/admin/`)
+* **API REST:** Servida en `/api/` (`domains/unu-raymi.com/public_html/api/`)
+* **Base de Datos:** Almacenada en `/database/data/` (protegida de accesos HTTP directos por `.htaccess`)
 
 ```
 ├── api/                    -> API REST unificada en PHP (comunicación Frontend <-> Admin)
 │   ├── config.php          -> Configuración de base de datos, CORS y credenciales
 │   ├── db.php              -> Motor de almacenamiento dual (JSON atómico y MySQL)
 │   ├── index.php           -> Router REST (/destinations, /tours, /styles, /leads, /settings)
-│   └── seed.php            -> Generador de datos iniciales
-├── admin/                  -> Panel Administrador (admin.unu-raymi.com)
+│   ├── seed.php            -> Generador de datos iniciales
+│   └── .htaccess           -> Reglas de reescritura interna del API
+├── admin/                  -> Panel Administrador CMS & CRM (/admin/)
 │   ├── index.php           -> Dashboard con KPIs y leads recientes
 │   ├── tours.php           -> Gestor de tours con editor de itinerario día a día interactivo
 │   ├── destinations.php    -> Gestor de hubs geográficos y páginas de alta conversión
 │   ├── leads.php           -> Bandeja CRM de solicitudes de clientes
 │   ├── settings.php        -> Configuración de marca y canales de concierge
 │   ├── login.php / auth.php-> Acceso y sesiones seguras
+│   ├── db-loader.php       -> Cargador dinámico de base de datos
 │   └── assets/             -> CSS y JS para modales y repetidores dinámicos
-├── frontend/               -> Portal Público (unu-raymi.com)
-│   ├── index.html          -> Portal SPA de ultralujo
+├── frontend/               -> Portal Público (unu-raymi.com/)
+│   ├── index.php           -> Portada cinematográfica estilo Kuoda Travel
+│   ├── tours.php           -> Catálogo de itinerarios de lujo (/tours)
+│   ├── tour.php            -> Ficha detallada de tour con itinerario interactivo (/tour/{slug})
+│   ├── destinations.php    -> Catálogo de destinos por país (/destinations)
+│   ├── country.php         -> Hub editorial por país (/destinations/{country})
+│   ├── destination.php     -> Ficha geográfica (/destinations/{slug})
+│   ├── contact.php         -> Diseñador de viajes a medida (/custom-journey)
+│   ├── about.php           -> The Unu Raymi Difference (/about)
+│   ├── responsible-travel.php -> Turismo sostenible (/responsible-travel)
 │   ├── css/style.css       -> Estilos cinematográficos (Oro Andino, Pizarra, Terracota)
-│   └── js/                 -> Sistema de Capas Superpuestas (Overlay Manager)
+│   └── js/app.js           -> Controlador de cliente y conexión con /api
 └── database/
     ├── data/               -> Base de datos en JSON con bloqueo atómico (Zero Setup)
     └── schema.sql          -> Esquema SQL listo para importar en phpMyAdmin de Hostinger
@@ -33,15 +48,13 @@ El proyecto está diseñado bajo un modelo de **cero costos recurrentes de licen
 
 ---
 
-## 🚀 Innovación Clave: Sistema de Overlays en Capas (Zero Page Jumps)
+## 🌟 Experiencia Cinematográfica Multi-Página (Estándar Kuoda Travel)
 
-Para evitar recargas lentas o saltos de pestañas que rompan la experiencia de navegación del cliente de lujo, toda la navegación se realiza dentro de una única ventana mediante capas superpuestas:
+Toda la navegación sigue el estándar de lujo de Kuoda Travel:
 
-* **Capa Base (Nivel 0):** Portal principal con portada cinematográfica, colecciones destacadas y pilares de confianza.
-* **Capa 1 (Overlay Sheet lateral):** Ficha editorial del destino geográfico (p. ej. *Cusco*, *Machu Picchu*, *Valle Sagrado*).
-* **Capa 2 (Overlay Sheet anidado):** Ficha de tour detallada con **acordeón día a día interactivo**, inclusiones, exclusiones y ruta.
-* **Capa 3 (Modal Superior):** Planificador de viaje y captador de leads estilo Gravity Forms.
-* **Navegación Intuitiva:** El botón "Atrás", la tecla `Escape` o el clic en el fondo oscuro desapilan suavemente las capas. Soporta sincronización de URL (`#destination=machu-picchu`, `#tour=machu-picchu-luxury-tours`).
+* **URLs Limpias y Amigables:** `/tours`, `/tour/machu-picchu-luxury-tours`, `/destinations/peru`, `/custom-journey`.
+* **Zero CORS:** Frontend, Admin y API comparten el mismo origen (`unu-raymi.com`), eliminando retardos de preflight OPTIONS y problemas de certificados SSL entre subdominios.
+* **Despliegue Atómico en 1 Solo Paso:** El empaquetador genera la distribución unificada en `dist/` para ser subida directamente a `domains/unu-raymi.com/public_html/`.
 
 ---
 

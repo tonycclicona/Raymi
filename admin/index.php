@@ -90,7 +90,7 @@ $recentLeads = array_slice($leads, 0, 5);
             <header class="topbar">
                 <div class="topbar-title">Panel de Control General</div>
                 <div class="topbar-actions">
-                    <a href="../frontend/index.html" target="_blank" class="view-site-link">
+                    <a href="/" target="_blank" class="view-site-link">
                         <span>Ver Sitio Web Unu Raymi</span> ↗
                     </a>
                 </div>

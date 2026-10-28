@@ -39,12 +39,19 @@ start_service() {
     if is_running "$pid_file"; then
         echo "   ℹ️  $name ya está en ejecución (PID: $(cat "$pid_file")) en http://$HOST:$port"
     else
-        nohup $command > "$log_file" 2>&1 &
-        local pid=$!
-        disown $pid 2>/dev/null
-        echo $pid > "$pid_file"
-        sleep 0.5
-        if kill -0 "$pid" 2>/dev/null; then
+        if command -v setsid >/dev/null 2>&1; then
+            setsid -f $command </dev/null > "$log_file" 2>&1
+            sleep 0.5
+            local pid=$(pgrep -f "$command" 2>/dev/null | tail -n 1)
+        else
+            nohup $command </dev/null > "$log_file" 2>&1 &
+            local pid=$!
+            disown $pid 2>/dev/null
+            sleep 0.5
+        fi
+
+        if [ -n "$pid" ] && kill -0 "$pid" 2>/dev/null; then
+            echo $pid > "$pid_file"
             echo "   ✅ $name iniciado en http://$HOST:$port (PID: $pid)"
         else
             echo "   ❌ Error al iniciar $name. Revisa $log_file"

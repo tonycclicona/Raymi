@@ -44,12 +44,19 @@ function env_get(string $key, $default = null) {
 
 // Base Paths & Data Storage
 $rootPath = dirname(__DIR__);
-if (file_exists(__DIR__ . '/database/data')) {
-    $dataPath = __DIR__ . '/database/data';
-} elseif (file_exists('/home/u209525223/domains/api.unu-raymi.com/public_html/database/data')) {
-    $dataPath = '/home/u209525223/domains/api.unu-raymi.com/public_html/database/data';
-} else {
-    $dataPath = $rootPath . '/database/data';
+$dataCandidates = [
+    __DIR__ . '/database/data',
+    $rootPath . '/database/data',
+    '/home/u209525223/domains/unu-raymi.com/public_html/database/data',
+    '/home/u209525223/domains/unu-raymi.com/public_html/api/database/data',
+    '/home/u209525223/domains/api.unu-raymi.com/public_html/database/data'
+];
+$dataPath = $rootPath . '/database/data';
+foreach ($dataCandidates as $candidate) {
+    if (file_exists($candidate) && is_dir($candidate)) {
+        $dataPath = $candidate;
+        break;
+    }
 }
 
 define('ROOT_PATH', $rootPath);
@@ -73,7 +80,7 @@ define('ADMIN_PASS_HASH', password_hash(env_get('ADMIN_PASS', 'UnuRaymi2025!'), 
 define('BRAND_NAME', 'Unu Raymi');
 define('BRAND_TAGLINE', 'Bespoke Luxury Journeys to Peru & South America');
 define('BRAND_DOMAIN', 'unu-raymi.com');
-define('API_DOMAIN', 'api.unu-raymi.com');
+define('API_DOMAIN', 'unu-raymi.com/api');
 define('ADMIN_DOMAIN', 'unu-raymi.com/admin');
 
 // Enable CORS for frontend and admin communication

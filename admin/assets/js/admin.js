@@ -111,8 +111,7 @@ function initLeadStatusUpdaters() {
             const newStatus = select.value;
 
             try {
-                const isProduction = window.location.hostname === 'unu-raymi.com' || window.location.hostname.endsWith('unu-raymi.com');
-                const apiBase = isProduction ? 'https://api.unu-raymi.com' : (window.location.pathname.startsWith('/admin') ? '/api' : '../api/index.php');
+                const apiBase = window.API_BASE || '/api';
                 const apiEndpoint = `${apiBase}/leads/${leadId}`;
                 const res = await fetch(apiEndpoint, {
                     method: 'PUT',

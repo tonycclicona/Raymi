@@ -115,12 +115,8 @@ if (file_exists($frontendPhp) && !is_dir($frontendPhp) && str_ends_with($fronten
 }
 
 // 6. Map Root or fallback to Frontend Index
-if ($uri === '/' || $uri === '' || $uri === '/index.html' || $uri === '/index.php') {
-    if (file_exists(__DIR__ . '/frontend/index.php')) {
-        include __DIR__ . '/frontend/index.php';
-    } else {
-        include __DIR__ . '/frontend/index.html';
-    }
+if ($uri === '/' || $uri === '' || $uri === '/index.php') {
+    include __DIR__ . '/frontend/index.php';
     exit;
 }
 

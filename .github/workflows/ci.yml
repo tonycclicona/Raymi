@@ -79,13 +79,13 @@ jobs:
             echo "has_credentials=true" >> $GITHUB_OUTPUT
           fi
 
-      - name: Build Targeted Production Distributions
+      - name: Build Unified Production Distribution
         run: |
-          echo "📦 Packaging targeted production artifacts..."
+          echo "📦 Packaging unified production distribution..."
           python3 scripts/build.py
-          echo "✅ Production artifacts successfully packaged in dist/"
+          echo "✅ Unified production package successfully generated in dist/"
 
-      - name: Deploy API Module (api.unu-raymi.com)
+      - name: Deploy Unified Platform to Hostinger (domains/unu-raymi.com/public_html)
         if: steps.check_credentials.outputs.has_credentials == 'true'
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
@@ -95,34 +95,6 @@ jobs:
           port: ${{ secrets.HOSTINGER_FTP_PORT || 21 }}
           protocol: ftps
           security: loose
-          local-dir: dist/api/
-          server-dir: ${{ vars.HOSTINGER_API_DIR || 'domains/api.unu-raymi.com/public_html/' }}
-          dangerous-clean-slate: false
-
-      - name: Deploy Frontend Web App (unu-raymi.com)
-        if: steps.check_credentials.outputs.has_credentials == 'true'
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-        with:
-          server: ${{ secrets.HOSTINGER_FTP_HOST }}
-          username: ${{ secrets.HOSTINGER_FTP_USER }}
-          password: ${{ secrets.HOSTINGER_FTP_PASSWORD }}
-          port: ${{ secrets.HOSTINGER_FTP_PORT || 21 }}
-          protocol: ftps
-          security: loose
-          local-dir: dist/frontend/
-          server-dir: ${{ vars.HOSTINGER_FRONTEND_DIR || 'domains/unu-raymi.com/public_html/' }}
-          dangerous-clean-slate: false
-
-      - name: Deploy Admin Panel (unu-raymi.com/admin)
-        if: steps.check_credentials.outputs.has_credentials == 'true'
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-        with:
-          server: ${{ secrets.HOSTINGER_FTP_HOST }}
-          username: ${{ secrets.HOSTINGER_FTP_USER }}
-          password: ${{ secrets.HOSTINGER_FTP_PASSWORD }}
-          port: ${{ secrets.HOSTINGER_FTP_PORT || 21 }}
-          protocol: ftps
-          security: loose
-          local-dir: dist/admin/
-          server-dir: ${{ vars.HOSTINGER_ADMIN_DIR || 'domains/unu-raymi.com/public_html/admin/' }}
+          local-dir: dist/
+          server-dir: ${{ vars.HOSTINGER_SERVER_DIR || 'domains/unu-raymi.com/public_html/' }}
           dangerous-clean-slate: false
