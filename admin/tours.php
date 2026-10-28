@@ -76,7 +76,12 @@ $tours = DB::getAll('tours');
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestión de Tours & Itinerarios | Unu Raymi Admin</title>
+    <!-- Favicon & Browser Touch Icons -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -88,7 +93,7 @@ $tours = DB::getAll('tours');
         <aside class="sidebar">
             <div class="sidebar-header">
                 <div class="sidebar-brand">
-                    <span class="brand-crest">✦</span>
+                    <img src="/assets/img/logo-icon.png" alt="Unu Raymi" class="admin-sidebar-logo" style="height: 38px; width: auto; flex-shrink: 0;">
                     <div class="brand-text">
                         <h2>UNU RAYMI</h2>
                         <span>CMS & Portal Admin</span>

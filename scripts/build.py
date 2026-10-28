@@ -56,8 +56,8 @@ if os.path.exists(db_data):
     copy_dir(db_data, os.path.join(DIST_DIR, "database", "data"))
     copy_dir(db_data, os.path.join(DIST_DIR, "api", "database", "data"))
 
-# 5. Copy essential root helpers
-for fname in ["server.js", "package.json", "router.php"]:
+# 5. Copy essential root helpers & browser manifests
+for fname in ["server.js", "package.json", "router.php", "favicon.ico", "site.webmanifest"]:
     src_f = os.path.join(ROOT_DIR, fname)
     if os.path.exists(src_f):
         shutil.copy2(src_f, os.path.join(DIST_DIR, fname))

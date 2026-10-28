@@ -1,0 +1,19 @@
+{
+  "name": "Unu Raymi Expeditions",
+  "short_name": "Unu Raymi",
+  "icons": [
+    {
+      "src": "/assets/img/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/img/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#090C11",
+  "background_color": "#090C11",
+  "display": "standalone"
+}

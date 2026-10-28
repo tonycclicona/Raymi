@@ -25,6 +25,14 @@ $meta_desc = $meta_desc ?? 'Handcrafted ultra-luxury private journeys across Per
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
+    <!-- Favicon & Browser Touch Icons -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#090C11">
+
     <!-- Global Stylesheet -->
     <link rel="stylesheet" href="/css/style.css">
 
@@ -38,12 +46,8 @@ $meta_desc = $meta_desc ?? 'Handcrafted ultra-luxury private journeys across Per
     <!-- Main Navigation Bar (Transparent on initial load, sticky luxury on scroll) -->
     <header class="header-nav" id="main-header-nav">
         <div class="container nav-inner">
-            <a href="/" class="brand-logo" title="Return to Homepage">
-                <span class="brand-crest">✦</span>
-                <div class="brand-name-group">
-                    <span class="dynamic-brand-name">UNU RAYMI</span>
-                    <span class="dynamic-brand-tagline">Bespoke Luxury Journeys</span>
-                </div>
+            <a href="/" class="brand-logo" title="Unu Raymi Expeditions">
+                <img src="/assets/img/logo-horizontal-light.png" alt="Unu Raymi Expeditions" class="brand-logo-img" height="46">
             </a>
 
             <!-- Desktop Navigation Menu -->
@@ -281,10 +285,9 @@ $meta_desc = $meta_desc ?? 'Handcrafted ultra-luxury private journeys across Per
     <div class="mobile-drawer-backdrop" id="mobile-drawer-backdrop"></div>
     <div class="mobile-drawer" id="mobile-drawer">
         <div class="mobile-drawer-header">
-            <div class="brand-logo">
-                <span class="brand-crest">✦</span>
-                <span class="dynamic-brand-name" style="font-size:16px;">UNU RAYMI</span>
-            </div>
+            <a href="/" class="brand-logo" title="Unu Raymi Expeditions">
+                <img src="/assets/img/logo-horizontal-light.png" alt="Unu Raymi Expeditions" class="brand-logo-img" style="height: 36px; width: auto;">
+            </a>
             <button type="button" class="mobile-drawer-close" id="mobile-close" aria-label="Close">✕</button>
         </div>
         <div class="mobile-drawer-body">

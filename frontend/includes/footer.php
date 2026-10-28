@@ -8,12 +8,10 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <div class="brand-logo" style="margin-bottom: 16px;">
-                        <span class="brand-crest">✦</span>
-                        <div class="brand-name-group">
-                            <h2 style="font-size: 20px; color: #FFF; margin: 0;">UNU RAYMI</h2>
-                            <span style="font-size: 9px; color: var(--gold);">Bespoke Luxury Journeys</span>
-                        </div>
+                    <div class="brand-logo" style="margin-bottom: 20px;">
+                        <a href="/" title="Unu Raymi Expeditions">
+                            <img src="/assets/img/logo-horizontal-light.png" alt="Unu Raymi Expeditions" class="brand-logo-img" style="height: 48px; width: auto;">
+                        </a>
                     </div>
                     <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.7; margin-bottom: 20px;">
                         Curators of handcrafted bespoke luxury journeys in Peru, Chile, and South America. Designed for discerning travelers seeking authenticity, absolute privacy, and unforgettable moments.

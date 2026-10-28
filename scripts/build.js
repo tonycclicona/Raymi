@@ -70,8 +70,8 @@ if (fs.existsSync(dbData)) {
     copyDirSync(dbData, path.join(DIST_DIR, 'api', 'database', 'data'));
 }
 
-// 6. Copy essential root helpers
-const entryFiles = ['server.js', 'package.json', 'router.php'];
+// 6. Copy essential root helpers & browser manifests
+const entryFiles = ['server.js', 'package.json', 'router.php', 'favicon.ico', 'site.webmanifest'];
 for (const fname of entryFiles) {
     const srcF = path.join(ROOT_DIR, fname);
     if (fs.existsSync(srcF)) {

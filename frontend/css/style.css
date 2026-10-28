@@ -146,6 +146,19 @@ body:not(.page-home) {
     flex-shrink: 0;
 }
 
+.brand-logo-img {
+    height: 46px;
+    width: auto;
+    max-height: 48px;
+    object-fit: contain;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.brand-logo:hover .brand-logo-img {
+    transform: scale(1.03);
+}
+
 .brand-crest {
     font-size: 24px;
     color: var(--gold);

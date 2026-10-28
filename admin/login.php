@@ -33,6 +33,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Acceso Administrador | Unu Raymi</title>
+    <!-- Favicon & Browser Touch Icons -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -41,11 +47,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <body class="login-body">
     <div class="login-wrapper">
         <div class="login-card">
-            <div class="login-brand">
-                <span class="brand-crest">✦</span>
-                <h1 class="brand-title">UNU RAYMI</h1>
+            <div class="login-brand" style="text-align: center; margin-bottom: 24px;">
+                <img src="/assets/img/logo-light.png" alt="Unu Raymi Expeditions" style="max-height: 85px; width: auto; margin-bottom: 12px; display: inline-block;">
                 <p class="brand-subtitle">Panel de Control & CMS de Viajes de Lujo</p>
-                <div class="admin-host-badge">admin.unu-raymi.com</div>
+                <div class="admin-host-badge">unu-raymi.com/admin</div>
             </div>
 
             <?php if (!empty($error)): ?>

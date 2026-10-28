@@ -92,6 +92,18 @@ a:hover {
     gap: 12px;
 }
 
+.admin-sidebar-logo {
+    height: 38px;
+    width: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 8px rgba(0,0,0,0.4));
+    transition: transform 0.2s ease;
+}
+
+.sidebar-brand:hover .admin-sidebar-logo {
+    transform: scale(1.05);
+}
+
 .brand-crest {
     color: var(--gold);
     font-size: 20px;
