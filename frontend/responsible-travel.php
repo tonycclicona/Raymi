@@ -10,7 +10,7 @@ $current_page = 'about';
 include __DIR__ . '/includes/header.php';
 ?>
 
-<!-- 1. FULL-SCREEN ADAPTIVE HERO BANNER (Kuoda Travel 100vh Standard) -->
+<!-- 1. FULL-SCREEN ADAPTIVE HERO BANNER -->
 <section class="subpage-hero content__banner" style="background-image: url('/assets/img/heroes/responsible-hero.webp');">
     <div class="subpage-hero-content content__banner__text">
         
@@ -27,7 +27,7 @@ include __DIR__ . '/includes/header.php';
             WATER CONSERVATION, ANCESTRAL WISDOM, AND COMMUNITY FLOURISHING IN THE ANDES
         </p>
 
-        <!-- Kuoda Travel Action Buttons (Matched to Reference Image) -->
+        <!-- Hero Action Buttons -->
         <div class="subpage-hero-actions">
             <a href="#yaku-kunan" class="btn-hero-gold">
                 Yaku Kunan Initiative

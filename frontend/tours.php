@@ -36,7 +36,7 @@ $current_page = 'tours';
 include __DIR__ . '/includes/header.php';
 ?>
 
-<!-- 1. FULL-SCREEN ADAPTIVE HERO BANNER (Kuoda Travel 100vh Standard) -->
+<!-- 1. FULL-SCREEN ADAPTIVE HERO BANNER -->
 <section class="subpage-hero content__banner" style="background-image: url('/assets/img/heroes/tours-catalog-hero.webp');">
     <div class="subpage-hero-content content__banner__text">
         

@@ -15,7 +15,7 @@ $current_page = 'destinations';
 include __DIR__ . '/includes/header.php';
 ?>
 
-<!-- 1. FULL-SCREEN ADAPTIVE HERO BANNER (Kuoda Travel 100vh Standard) -->
+<!-- 1. FULL-SCREEN ADAPTIVE HERO BANNER -->
 <section class="subpage-hero content__banner" style="background-image: url('/assets/img/heroes/destinations-hero.webp');">
     <div class="subpage-hero-content content__banner__text">
         
@@ -32,7 +32,7 @@ include __DIR__ . '/includes/header.php';
             EXQUISITE, HANDCRAFTED PRIVATE JOURNEYS WITH POSITIVE IMPACT: TRAVEL TO SOUTH AMERICA
         </p>
 
-        <!-- Kuoda Travel Action Buttons (Matched to Reference Image) -->
+        <!-- Hero Action Buttons -->
         <div class="subpage-hero-actions">
             <a href="#destinations-catalog" class="btn-hero-gold">
                 Explore Destinations

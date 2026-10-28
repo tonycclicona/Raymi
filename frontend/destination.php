@@ -1,7 +1,7 @@
 <?php
 /**
  * Unu Raymi - Geographic Destination Subpage Dedicated View
- * Replaces overlays with full, standalone, SEO-rich subpages matching kuodatravel.com standard
+ * Full standalone, SEO-rich luxury subpage
  */
 
 require_once __DIR__ . '/includes/db-loader.php';
@@ -47,7 +47,7 @@ $current_page = 'destinations';
 include __DIR__ . '/includes/header.php';
 ?>
 
-<!-- 1. FULL-SCREEN ADAPTIVE HERO BANNER (Kuoda Travel 100vh Standard) -->
+<!-- 1. FULL-SCREEN ADAPTIVE HERO BANNER -->
 <section class="subpage-hero tour-detail-hero content__banner" style="background-image: url('<?php echo htmlspecialchars($dest['image'] ?? 'https://images.unsplash.com/photo-1587595431973-160d0d94add1?auto=format&fit=crop&w=2000&q=80'); ?>');">
     <div class="subpage-hero-content content__banner__text">
         
@@ -71,7 +71,7 @@ include __DIR__ . '/includes/header.php';
             <?php echo htmlspecialchars($dest['subtitle'] ?? "A land of mysticism, pristine nature, and warm Andean hospitality."); ?>
         </p>
 
-        <!-- Kuoda Travel Action Buttons (Matched to Reference Image) -->
+        <!-- Hero Action Buttons -->
         <div class="subpage-hero-actions">
             <a href="#destination-details" class="btn-hero-gold">
                 Explore Private Guide

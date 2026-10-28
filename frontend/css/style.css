@@ -457,7 +457,7 @@ body:not(.page-home) {
 }
 
 /* ==========================================================================
-   Visual Destinations Mega-Menu (Kuoda Travel replica standard)
+   Visual Destinations Mega-Menu (Unu Raymi luxury standard)
    ========================================================================== */
 .destinations-visual-menu {
     left: 50% !important;
@@ -708,7 +708,7 @@ body:not(.page-home) {
 }
 
 /* ==========================================================================
-   Hero Section (Kuoda Travel standard matching Image 2)
+   Hero Section (Unu Raymi hero standard)
    ========================================================================== */
 .hero-section {
     position: relative;
@@ -1651,7 +1651,7 @@ body:not(.page-home) {
 }
 
 /* ==========================================================================
-   TOP ANNOUNCEMENT BAR & GLOBAL SUBPAGE STYLES (Kuoda Travel standard)
+   TOP ANNOUNCEMENT BAR & GLOBAL SUBPAGE STYLES (Unu Raymi luxury standard)
    ========================================================================== */
 .top-announcement-bar {
     background: #040608;
@@ -2781,7 +2781,7 @@ textarea.form-control {
 }
 
 /* ==========================================================================
-   SIGNATURE ITINERARIES CAROUSEL (Kuoda Travel standard - Image 2)
+   SIGNATURE ITINERARIES CAROUSEL (Unu Raymi signature itineraries standard)
    ========================================================================== */
 .signature-itineraries-section {
     background-color: #FAF8F5;
@@ -2871,7 +2871,7 @@ textarea.form-control {
     box-sizing: border-box;
 }
 
-/* Card Styling (Exact Kuoda Design) */
+/* Card Styling (Unu Raymi Luxury Design) */
 .sig-card {
     display: flex;
     flex-direction: column;
@@ -2904,7 +2904,7 @@ textarea.form-control {
     transform: scale(1.05);
 }
 
-/* Petrol / Teal Green Container (Kuoda Color #236561) */
+/* Petrol / Teal Green Container (Unu Raymi Color #236561) */
 .sig-card-footer {
     background-color: #236561 !important;
     padding: 20px 18px 22px;
@@ -3057,17 +3057,17 @@ textarea.form-control {
 }
 
 /* ==========================================================================
-   KUODA DESTINATION PAGE & SIGNATURE ITINERARIES (Kuoda Travel Standard)
+   UNU RAYMI DESTINATION PAGE & SIGNATURE ITINERARIES
    ========================================================================== */
 
 /* ==========================================================================
-   KUODA TRAVEL FULL-SCREEN ADAPTIVE HERO BANNER SYSTEM (100vh / 100dvh)
+   UNU RAYMI FULL-SCREEN ADAPTIVE HERO BANNER SYSTEM (100vh / 100dvh)
    Applied consistently across all subpages: Country, Tour, Destinations, Tours, About, Responsible, Contact
    ========================================================================== */
 
 .subpage-hero,
 .dest-hero-section,
-.tour-kuoda-hero,
+.tour-kuoda-hero, .tour-detail-hero,
 .tour-detail-hero,
 .content__banner {
     position: relative;
@@ -3090,10 +3090,10 @@ textarea.form-control {
     z-index: 1;
 }
 
-/* Multi-layer luxury vignette overlays matching Kuoda Travel */
+/* Multi-layer luxury vignette overlays */
 .subpage-hero::after,
 .dest-hero-section::after,
-.tour-kuoda-hero::after,
+.tour-kuoda-hero::after, .tour-detail-hero::after,
 .tour-detail-hero::after,
 .content__banner::after {
     content: "";
@@ -3110,7 +3110,7 @@ textarea.form-control {
 
 .subpage-hero::before,
 .dest-hero-section::before,
-.tour-kuoda-hero::before,
+.tour-kuoda-hero::before, .tour-detail-hero::before,
 .tour-detail-hero::before,
 .content__banner::before {
     content: "";
@@ -3132,7 +3132,7 @@ textarea.form-control {
 /* Inner content container */
 .subpage-hero-content,
 .dest-hero-content,
-.tour-kuoda-hero-inner,
+.tour-kuoda-hero-inner, .tour-detail-hero-inner,
 .tour-hero-content,
 .content__banner__text {
     position: relative;
@@ -3190,7 +3190,7 @@ textarea.form-control {
 /* Luxury Subpage Pill Tag / Badge */
 .subpage-hero-tag,
 .dest-hero-tag,
-.tour-kuoda-badge,
+.tour-kuoda-badge, .tour-detail-badge,
 .tour-hero-badges {
     display: inline-flex;
     align-items: center;
@@ -3214,7 +3214,7 @@ textarea.form-control {
 /* Hero Typography */
 .subpage-hero-title,
 .dest-hero-title,
-.tour-kuoda-title,
+.tour-kuoda-title, .tour-detail-title,
 .tour-hero-title,
 .content__banner__text h1 {
     font-family: 'Cinzel', serif;
@@ -3229,7 +3229,7 @@ textarea.form-control {
 }
 
 .subpage-hero-h2,
-.tour-kuoda-h2,
+.tour-kuoda-h2, .tour-detail-h2,
 .content__banner__text h2 {
     font-family: 'Cinzel', serif;
     font-size: clamp(1.3rem, 2.8vw, 2.2rem);
@@ -3244,7 +3244,7 @@ textarea.form-control {
 
 .subpage-hero-subtitle,
 .dest-hero-subtitle,
-.tour-kuoda-subtitle,
+.tour-kuoda-subtitle, .tour-detail-subtitle,
 .tour-hero-subtitle,
 .content__banner__text p {
     font-family: 'Inter', sans-serif;
@@ -3261,7 +3261,7 @@ textarea.form-control {
 
 /* Action Buttons */
 .subpage-hero-actions,
-.tour-kuoda-actions {
+.tour-kuoda-actions, .tour-detail-actions {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -3380,7 +3380,7 @@ textarea.form-control {
     color: rgba(255, 255, 255, 0.85);
     text-decoration: none;
     transition: all 0.3s ease;
-    animation: kuodaHeroBounce 2.2s infinite ease-in-out;
+    animation: unuHeroBounce 2.2s infinite ease-in-out;
 }
 .content__banner__next:hover,
 .subpage-hero-next:hover {
@@ -3395,7 +3395,7 @@ textarea.form-control {
     fill: none;
 }
 
-@keyframes kuodaHeroBounce {
+@keyframes unuHeroBounce {
     0%, 20%, 50%, 80%, 100% {
         transform: translateX(-50%) translateY(0);
     }
@@ -3412,20 +3412,20 @@ textarea.form-control {
     .content__banner,
     .subpage-hero,
     .dest-hero-section,
-    .tour-kuoda-hero,
+    .tour-kuoda-hero, .tour-detail-hero,
     .tour-detail-hero {
         padding: 95px 18px 75px;
     }
     .subpage-hero-title,
     .dest-hero-title,
-    .tour-kuoda-title,
+    .tour-kuoda-title, .tour-detail-title,
     .tour-hero-title,
     .content__banner__text h1 {
         font-size: clamp(1.85rem, 7vw, 2.6rem);
     }
     .subpage-hero-subtitle,
     .dest-hero-subtitle,
-    .tour-kuoda-subtitle,
+    .tour-kuoda-subtitle, .tour-detail-subtitle,
     .tour-hero-subtitle,
     .content__banner__text p {
         font-size: 0.92rem;
@@ -3434,7 +3434,7 @@ textarea.form-control {
         margin-bottom: 24px;
     }
     .subpage-hero-actions,
-    .tour-kuoda-actions {
+    .tour-kuoda-actions, .tour-detail-actions {
         flex-direction: column;
         width: 100%;
         gap: 12px;
@@ -3532,8 +3532,8 @@ textarea.form-control {
 }
 
 /* ==========================================================================
-   KUODA SIGNATURE TOURS CARDS (.carousel__itineraries & .item)
-   Exact match to https://www.kuodatravel.com/destinations/peru/
+   SIGNATURE TOURS CARDS (.carousel__itineraries & .item)
+   Unu Raymi country destination portal
    ========================================================================== */
 .dest-signature-section {
     background: #FFF;
@@ -3574,7 +3574,7 @@ textarea.form-control {
     line-height: 1.7;
 }
 
-/* Kuoda Itineraries Grid */
+/* Signature Itineraries Grid */
 .carousel__itineraries {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -3584,7 +3584,7 @@ textarea.form-control {
 }
 .carousel__itineraries .item {
     position: relative;
-    background: #9A6615; /* Kuoda's Signature Ochre/Gold */
+    background: #9A6615; /* Unu Raymi Signature Ochre/Gold */
     border-radius: 2px;
     overflow: hidden;
     box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
@@ -3807,7 +3807,7 @@ textarea.form-control {
     gap: 6px;
 }
 
-/* Experience Peru (Themes Grid - Matching Kuoda Screenshot) */
+/* Experience Destination (Themes Grid) */
 .dest-experience-section {
     background: #F3F3F1;
     padding: 85px 0 80px;
@@ -3996,7 +3996,7 @@ textarea.form-control {
 }
 
 /* ========================================================
-   KUODA TRAVEL TOUR SUBPAGE EDITORIAL STANDARD
+   UNU RAYMI TOUR SUBPAGE EDITORIAL STANDARD
    ======================================================== */
 .tour-section {
     padding: 80px 0;
@@ -4012,7 +4012,7 @@ textarea.form-control {
 }
 
 /* Tour Hero Banner - using unified full-screen 100vh adaptive system */
-.tour-kuoda-hero {
+.tour-kuoda-hero, .tour-detail-hero {
     /* Height and flex layout handled by .subpage-hero unified system */
 }
 
@@ -4088,7 +4088,7 @@ textarea.form-control {
     margin: 0;
 }
 
-/* Itinerary Accordion (Kuoda vc_tta-accordion Standard) */
+/* Itinerary Accordion (Interactive Accordion Standard) */
 .tour-itinerary-section {
     background: #FFFFFF;
 }
@@ -4236,7 +4236,7 @@ textarea.form-control {
     outline: none;
 }
 
-/* Price & Inclusions (Kuoda 3-Column Standard) */
+/* Price & Inclusions (3-Column Standard) */
 .tour-price-section {
     background: #FFFFFF;
     border-bottom: 1px solid rgba(68, 49, 58, 0.08);
@@ -4393,7 +4393,7 @@ textarea.form-control {
 
 /* Responsive adjustments for Tour page */
 @media (max-width: 960px) {
-    .tour-kuoda-title {
+    .tour-kuoda-title, .tour-detail-title {
         font-size: 38px;
     }
     .tour-highlights-grid {
@@ -4426,7 +4426,7 @@ textarea.form-control {
 }
 
 @media (max-width: 640px) {
-    .tour-kuoda-title {
+    .tour-kuoda-title, .tour-detail-title {
         font-size: 30px;
     }
     .tour-inquiry-form {
@@ -4520,7 +4520,7 @@ h1.sub__title,
     box-shadow: 0 4px 14px rgba(154, 102, 21, 0.35) !important;
 }
 
-/* 4. Kuoda Signature Cards (.carousel__itineraries .item) */
+/* 4. Signature Itineraries Cards (.carousel__itineraries .item) */
 .carousel__itineraries .item {
     background: #9A6615 !important; /* Authentic Ochre/Gold */
     color: #FFFFFF !important;
@@ -4952,7 +4952,7 @@ a.cta-button {
 .btn-hero-white,
 .subpage-hero .button__web__white,
 .dest-hero-section .cta-button,
-.tour-kuoda-hero .cta-button {
+.tour-kuoda-hero .cta-button, .tour-detail-hero .cta-button {
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
@@ -5061,7 +5061,7 @@ form button[type="submit"].cta-button,
 @media (max-width: 768px) {
     .hero-clean-actions,
     .subpage-hero-actions,
-    .tour-kuoda-actions {
+    .tour-kuoda-actions, .tour-detail-actions {
         display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
@@ -5079,9 +5079,9 @@ form button[type="submit"].cta-button,
     }
 }
 /* ==========================================================================
-   Kuoda Travel Bespoke Trip Planner Lead Section (Reference Image Standard)
+   Unu Raymi Bespoke Trip Planner Lead Section
    ========================================================================== */
-.kuoda-lead-section {
+.kuoda-lead-section, .unu-lead-section {
     background-color: #44313A !important;
     padding: 70px 24px 80px !important;
     color: #FFFFFF !important;
@@ -5089,13 +5089,13 @@ form button[type="submit"].cta-button,
     box-sizing: border-box;
 }
 
-.kuoda-lead-container {
+.kuoda-lead-container, .unu-lead-container {
     max-width: 980px;
     margin: 0 auto;
     box-sizing: border-box;
 }
 
-.kuoda-lead-title {
+.kuoda-lead-title, .unu-lead-title {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
     font-size: 20px !important;
     font-weight: 400 !important;
@@ -5107,26 +5107,26 @@ form button[type="submit"].cta-button,
     letter-spacing: 0.01em;
 }
 
-.kuoda-lead-grid {
+.kuoda-lead-grid, .unu-lead-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 14px 18px;
     align-items: start;
 }
 
-.kuoda-lead-col {
+.kuoda-lead-col, .unu-lead-col {
     display: flex;
     flex-direction: column;
     gap: 14px;
 }
 
-.kuoda-lead-split-row {
+.kuoda-lead-split-row, .unu-lead-split-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 14px;
 }
 
-.kuoda-lead-input {
+.kuoda-lead-input, .unu-lead-input {
     width: 100%;
     height: 46px;
     background-color: #F5F3F1 !important;
@@ -5140,19 +5140,19 @@ form button[type="submit"].cta-button,
     transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-.kuoda-lead-input::placeholder {
+.kuoda-lead-input::placeholder, .unu-lead-input::placeholder {
     color: #706B6E !important;
     opacity: 1 !important;
 }
 
-.kuoda-lead-input:focus {
+.kuoda-lead-input:focus, .unu-lead-input:focus {
     outline: none !important;
     background-color: #FFFFFF !important;
     border-color: #D4AF37 !important;
     box-shadow: 0 0 0 1px #D4AF37 !important;
 }
 
-select.kuoda-lead-input {
+select.kuoda-lead-input, select.unu-lead-input {
     appearance: none !important;
     -webkit-appearance: none !important;
     -moz-appearance: none !important;
@@ -5164,18 +5164,18 @@ select.kuoda-lead-input {
     cursor: pointer !important;
 }
 
-select.kuoda-lead-input option {
+select.kuoda-lead-input option, select.unu-lead-input option {
     color: #222222 !important;
     background-color: #FFFFFF !important;
     padding: 8px 12px !important;
 }
 
-select.kuoda-lead-input option:disabled,
-select.kuoda-lead-input option[value=""] {
+select.kuoda-lead-input option:disabled, select.unu-lead-input option:disabled,
+select.kuoda-lead-input option[value=""], select.unu-lead-input option[value=""] {
     color: #706B6E !important;
 }
 
-textarea.kuoda-lead-input.kuoda-lead-textarea {
+textarea.kuoda-lead-input.kuoda-lead-textarea, textarea.unu-lead-input.unu-lead-textarea {
     height: 106px !important;
     min-height: 106px !important;
     padding: 12px 14px !important;
@@ -5183,12 +5183,12 @@ textarea.kuoda-lead-input.kuoda-lead-textarea {
     resize: vertical !important;
 }
 
-.kuoda-lead-submit-wrap {
+.kuoda-lead-submit-wrap, .unu-lead-submit-wrap {
     text-align: center;
     margin-top: 26px;
 }
 
-.kuoda-lead-submit-btn {
+.kuoda-lead-submit-btn, .unu-lead-submit-btn {
     display: inline-block !important;
     min-width: 140px !important;
     max-width: 180px !important;
@@ -5210,20 +5210,20 @@ textarea.kuoda-lead-input.kuoda-lead-textarea {
     letter-spacing: normal !important;
 }
 
-.kuoda-lead-submit-btn:hover {
+.kuoda-lead-submit-btn:hover, .unu-lead-submit-btn:hover {
     background-color: #EFECE9 !important;
     color: #2B1E24 !important;
     transform: translateY(-1px);
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2) !important;
 }
 
-.kuoda-lead-submit-btn:disabled {
+.kuoda-lead-submit-btn:disabled, .unu-lead-submit-btn:disabled {
     opacity: 0.6 !important;
     cursor: not-allowed !important;
     transform: none !important;
 }
 
-.kuoda-lead-feedback {
+.kuoda-lead-feedback, .unu-lead-feedback {
     max-width: 600px;
     margin: 20px auto 0;
     padding: 16px 20px;
@@ -5233,40 +5233,40 @@ textarea.kuoda-lead-input.kuoda-lead-textarea {
     line-height: 1.5;
 }
 
-.kuoda-lead-feedback.success {
+.kuoda-lead-feedback.success, .unu-lead-feedback.success {
     background-color: #FFFFFF;
     color: #2E5A36;
     border: 1px solid #4ADE80;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-.kuoda-lead-feedback.error {
+.kuoda-lead-feedback.error, .unu-lead-feedback.error {
     background-color: #FFF5F5;
     color: #9B1C1C;
     border: 1px solid #F87171;
 }
 
 @media (max-width: 768px) {
-    .kuoda-lead-section {
+    .kuoda-lead-section, .unu-lead-section {
         padding: 50px 18px 60px !important;
     }
-    .kuoda-lead-title {
+    .kuoda-lead-title, .unu-lead-title {
         font-size: 17px !important;
         margin-bottom: 24px !important;
     }
-    .kuoda-lead-grid {
+    .kuoda-lead-grid, .unu-lead-grid {
         grid-template-columns: 1fr;
         gap: 14px;
     }
-    .kuoda-lead-split-row {
+    .kuoda-lead-split-row, .unu-lead-split-row {
         grid-template-columns: 1fr;
         gap: 14px;
     }
-    textarea.kuoda-lead-input.kuoda-lead-textarea {
+    textarea.kuoda-lead-input.kuoda-lead-textarea, textarea.unu-lead-input.unu-lead-textarea {
         height: 90px !important;
         min-height: 90px !important;
     }
-    .kuoda-lead-submit-btn {
+    .kuoda-lead-submit-btn, .unu-lead-submit-btn {
         width: 100% !important;
         max-width: 240px !important;
     }

@@ -3,7 +3,7 @@
  * Unu Raymi - Global Footer Component
  */
 ?>
-    <!-- Site Footer (Kuoda Travel standard 4-column layout) -->
+    <!-- Site Footer (Unu Raymi 4-column layout) -->
     <footer class="site-footer">
         <div class="container">
             <div class="footer-grid">
@@ -52,7 +52,7 @@
                     <h5>Contact & 24/7 Concierge</h5>
                     <p style="font-size: 13px; color: var(--text-secondary); margin-bottom: 12px;">
                         On-the-Ground WhatsApp:<br>
-                        <strong style="color: var(--gold-light);">+51 984 123 456</strong>
+                        <strong style="color: var(--gold-light);">(+51) 915 082 539</strong>
                     </p>
                     <p style="font-size: 13px; color: var(--text-secondary); margin-bottom: 20px;">
                         Travel Designer Email:<br>

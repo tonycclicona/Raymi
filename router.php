@@ -53,7 +53,7 @@ if (str_starts_with($uri, '/api')) {
     exit;
 }
 
-// 5. Clean URLs for Subpages (Multi-page routing matching kuodatravel.com)
+// 5. Clean URLs for Subpages (Multi-page routing)
 $trimmedUri = rtrim($uri, '/');
 
 // Tours Catalog
@@ -75,7 +75,7 @@ if ($trimmedUri === '/destinations') {
     exit;
 }
 
-// Country Destination Page: /destinations/{country} (matching Kuoda Travel /destinations/peru/, /destinations/chile/, etc.)
+// Country Destination Page: /destinations/{country}
 if (preg_match('#^/destinations?/(peru|chile|bolivia|ecuador|colombia|argentina)$#i', $trimmedUri, $matches)) {
     $_GET['country'] = strtolower($matches[1]);
     require __DIR__ . '/frontend/country.php';

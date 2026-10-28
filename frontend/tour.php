@@ -1,7 +1,7 @@
 <?php
 /**
  * Unu Raymi - Tour Subpage View
- * Replicates Kuoda Travel's full-width editorial standard:
+ * Luxury tour editorial standard:
  * 1. Adaptive 100vh Hero Banner with background image & breadcrumbs
  * 2. Route Bar and Overview headline
  * 3. Highlights in clean 2-column bulleted grid
@@ -61,9 +61,9 @@ $current_page = 'tour-detail';
 include __DIR__ . '/includes/header.php';
 ?>
 
-<!-- 1. FULL-SCREEN ADAPTIVE HERO BANNER (Kuoda Travel 100vh Standard) -->
-<section class="tour-kuoda-hero content__banner" style="background-image: url('<?php echo htmlspecialchars($tour['hero_image'] ?? $tour['card_image'] ?? '/assets/img/tours/Luxury-Machu-Picchu-Tours.webp'); ?>');">
-    <div class="tour-kuoda-hero-inner content__banner__text">
+<!-- 1. FULL-SCREEN ADAPTIVE HERO BANNER -->
+<section class="tour-detail-hero content__banner" style="background-image: url('<?php echo htmlspecialchars($tour['hero_image'] ?? $tour['card_image'] ?? '/assets/img/tours/Luxury-Machu-Picchu-Tours.webp'); ?>');">
+    <div class="tour-detail-hero-inner content__banner__text">
         
         <!-- Glassmorphism Breadcrumbs inside hero -->
         <div class="subpage-hero-breadcrumbs">
@@ -76,11 +76,11 @@ include __DIR__ . '/includes/header.php';
             <span class="active"><?php echo htmlspecialchars($tour['title']); ?></span>
         </div>
 
-        <div class="tour-kuoda-badge">
+        <div class="tour-detail-badge">
             <span><?php echo $countryFlag; ?> <?php echo strtoupper($countryName); ?> ✦ <?php echo $daysCount; ?> DAYS / <?php echo $nightsCount; ?> NIGHTS ✦ 100% PRIVATE SERVICE</span>
         </div>
 
-        <h1 class="tour-kuoda-title"><?php echo htmlspecialchars($tour['title']); ?></h1>
+        <h1 class="tour-detail-title"><?php echo htmlspecialchars($tour['title']); ?></h1>
         <h2 class="subpage-hero-h2"><?php echo htmlspecialchars($tour['overview_headline'] ?? 'Unveiling South America’s Timeless Wonders'); ?></h2>
 
         <?php if (!empty($tour['route']) && is_array($tour['route'])): ?>
@@ -106,7 +106,7 @@ include __DIR__ . '/includes/header.php';
     </a>
 </section>
 
-<!-- 2. OVERVIEW & DESTINATIONS ROUTE (Kuoda Standard) -->
+<!-- 2. OVERVIEW & DESTINATIONS ROUTE -->
 <section class="tour-section tour-overview-section" id="tour-overview">
     <div class="tour-narrow-container">
         <h2 class="sub__title text-center"><?php echo htmlspecialchars($tour['overview_headline'] ?? 'Unveiling South America’s Timeless Wonders'); ?></h2>
@@ -140,7 +140,7 @@ include __DIR__ . '/includes/header.php';
     </div>
 </section>
 
-<!-- 4. HIGHLIGHTS (Kuoda 2-Column Grid) -->
+<!-- 4. HIGHLIGHTS (2-Column Grid) -->
 <?php if (!empty($tour['highlights']) && is_array($tour['highlights'])): ?>
 <section class="tour-section tour-highlights-section">
     <div class="tour-narrow-container">
@@ -158,7 +158,7 @@ include __DIR__ . '/includes/header.php';
 </section>
 <?php endif; ?>
 
-<!-- 5. ITINERARY (Interactive Accordion Matching Kuoda vc_tta-accordion) -->
+<!-- 5. ITINERARY (Interactive Accordion) -->
 <?php if (!empty($tour['itinerary']) && is_array($tour['itinerary'])): ?>
 <section id="itinerary-section" class="tour-section tour-itinerary-section">
     <div class="tour-narrow-container">
@@ -202,7 +202,7 @@ include __DIR__ . '/includes/header.php';
 </section>
 <?php endif; ?>
 
-<!-- 6. LEAD CAPTURE SECTION ("Your Trip Begins Here" - Kuoda Standard) -->
+<!-- 6. LEAD CAPTURE SECTION ("Your Trip Begins Here") -->
 <section id="lead-form-section" class="tour-section tour-lead-section">
     <div class="tour-narrow-container">
         <h2 class="sub__title text-center">Your Trip Begins Here</h2>
@@ -268,7 +268,7 @@ include __DIR__ . '/includes/header.php';
     </div>
 </section>
 
-<!-- 7. PRICE & INCLUSIONS (Kuoda 3-Column Standard) -->
+<!-- 7. PRICE & INCLUSIONS (3-Column Standard) -->
 <section class="tour-section tour-price-section">
     <div class="tour-narrow-container">
         <h2 class="sub__title text-center">Price &amp; Inclusions</h2>
@@ -386,7 +386,7 @@ include __DIR__ . '/includes/header.php';
     </div>
 </section>
 
-<!-- 10. SAMPLE ITINERARIES (Kuoda Style) -->
+<!-- 10. SAMPLE ITINERARIES -->
 <section class="tour-section tour-related-section">
     <div class="container">
         <p class="text-center textoh4" style="color: #9A6615; letter-spacing: 0.18em; font-size: 12px; margin-bottom: 8px;">MORE SAMPLE</p>

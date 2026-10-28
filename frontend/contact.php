@@ -1,7 +1,7 @@
 <?php
 /**
  * Unu Raymi - Contact & Bespoke Custom Journey Designer Subpage
- * Replicates Kuoda Travel's multi-step / rich Gravity Forms lead generation engine
+ * Luxury lead generation engine
  */
 
 $page_title = 'Design Your Bespoke Journey | Unu Raymi Luxury Travel';
@@ -11,7 +11,7 @@ $current_page = 'contact';
 include __DIR__ . '/includes/header.php';
 ?>
 
-<!-- 1. FULL-SCREEN ADAPTIVE HERO BANNER (Kuoda Travel 100vh Standard) -->
+<!-- 1. FULL-SCREEN ADAPTIVE HERO BANNER -->
 <section class="subpage-hero content__banner" style="background-image: url('/assets/img/hero-banner.webp');">
     <div class="subpage-hero-content content__banner__text">
         
@@ -28,12 +28,12 @@ include __DIR__ . '/includes/header.php';
             HANDCRAFTED PRIVATE ITINERARIES ACROSS PERU &amp; SOUTH AMERICA BY OUR PRIVATE CURATORS IN CUSCO
         </p>
 
-        <!-- Kuoda Travel Action Buttons (Matched to Reference Image) -->
+        <!-- Unu Raymi Action Buttons -->
         <div class="subpage-hero-actions">
             <a href="#bespoke-journey-form" class="btn-hero-gold">
                 Begin Form
             </a>
-            <a href="https://wa.me/51984123456?text=Hello%20Unu%20Raymi,%20I%20would%20like%20information%20for%20a%20bespoke%20luxury%20journey" target="_blank" rel="noopener noreferrer" class="btn-hero-outline">
+            <a href="https://wa.me/51915082539?text=Hello%20Unu%20Raymi,%20I%20would%20like%20information%20for%20a%20bespoke%20luxury%20journey" target="_blank" rel="noopener noreferrer" class="btn-hero-outline">
                 WhatsApp Concierge ↗
             </a>
         </div>
@@ -45,18 +45,18 @@ include __DIR__ . '/includes/header.php';
     </a>
 </section>
 
-<!-- 2. BESPOKE TRIP PLANNER LEAD GENERATION (Exact Kuoda Travel Reference Standard) -->
-<section class="kuoda-lead-section" id="bespoke-journey-form">
-    <div class="kuoda-lead-container">
-        <h3 class="kuoda-lead-title">
+<!-- 2. BESPOKE TRIP PLANNER LEAD GENERATION -->
+<section class="unu-lead-section" id="bespoke-journey-form">
+    <div class="unu-lead-container">
+        <h3 class="unu-lead-title">
             Start planning your bespoke luxury adventure with Unu Raymi today and explore Peru in the most personalized, elegant way possible.
         </h3>
 
         <form id="bespoke-journey-form-el" onsubmit="submitCustomJourneyLead(event)">
-            <div class="kuoda-lead-grid">
+            <div class="unu-lead-grid">
                 <!-- Left Column -->
-                <div class="kuoda-lead-col">
-                    <select name="destination" class="kuoda-lead-input" required>
+                <div class="unu-lead-col">
+                    <select name="destination" class="unu-lead-input" required>
                         <option value="" disabled selected>Where would you like to go? *</option>
                         <option value="Peru">Peru</option>
                         <option value="Ecuador">Ecuador</option>
@@ -67,38 +67,38 @@ include __DIR__ . '/includes/header.php';
                         <option value="More than one country">More than one country</option>
                     </select>
 
-                    <div class="kuoda-lead-split-row">
-                        <input type="text" name="travel_date" class="kuoda-lead-input" placeholder="When would you like to travel? *" required>
-                        <input type="text" name="trip_length" class="kuoda-lead-input" placeholder="Preferred length of trip? *" required>
+                    <div class="unu-lead-split-row">
+                        <input type="text" name="travel_date" class="unu-lead-input" placeholder="When would you like to travel? *" required>
+                        <input type="text" name="trip_length" class="unu-lead-input" placeholder="Preferred length of trip? *" required>
                     </div>
 
-                    <input type="text" name="travelers" class="kuoda-lead-input" placeholder="Number of travelers? *" required>
+                    <input type="text" name="travelers" class="unu-lead-input" placeholder="Number of travelers? *" required>
 
-                    <select name="accommodation" class="kuoda-lead-input" required>
+                    <select name="accommodation" class="unu-lead-input" required>
                         <option value="" disabled selected>Level of accommodations? *</option>
                         <option value="Luxury ( 5-star )">Luxury ( 5-star )</option>
                         <option value="Deluxe ( 4-star )">Deluxe ( 4-star )</option>
                         <option value="Boutique ( 3-star )">Boutique ( 3-star )</option>
                     </select>
 
-                    <input type="text" name="budget" class="kuoda-lead-input" placeholder="Budget (per person)?">
+                    <input type="text" name="budget" class="unu-lead-input" placeholder="Budget (per person)?">
                 </div>
 
                 <!-- Right Column -->
-                <div class="kuoda-lead-col">
-                    <input type="text" name="first_name" class="kuoda-lead-input" placeholder="First name *" required>
-                    <input type="text" name="last_name" class="kuoda-lead-input" placeholder="Last name*" required>
-                    <input type="email" name="email" class="kuoda-lead-input" placeholder="Email *" required>
-                    <input type="tel" name="phone" class="kuoda-lead-input" placeholder="Phone Number">
-                    <textarea name="notes" class="kuoda-lead-input kuoda-lead-textarea" placeholder="Additional comments?"></textarea>
+                <div class="unu-lead-col">
+                    <input type="text" name="first_name" class="unu-lead-input" placeholder="First name *" required>
+                    <input type="text" name="last_name" class="unu-lead-input" placeholder="Last name*" required>
+                    <input type="email" name="email" class="unu-lead-input" placeholder="Email *" required>
+                    <input type="tel" name="phone" class="unu-lead-input" placeholder="Phone Number">
+                    <textarea name="notes" class="unu-lead-input unu-lead-textarea" placeholder="Additional comments?"></textarea>
                 </div>
             </div>
 
-            <div class="kuoda-lead-submit-wrap">
-                <button type="submit" class="kuoda-lead-submit-btn">Submit</button>
+            <div class="unu-lead-submit-wrap">
+                <button type="submit" class="unu-lead-submit-btn">Submit</button>
             </div>
 
-            <div class="kuoda-lead-feedback" style="display: none;"></div>
+            <div class="unu-lead-feedback" style="display: none;"></div>
         </form>
     </div>
 </section>
@@ -124,7 +124,7 @@ include __DIR__ . '/includes/header.php';
                     <span class="icon">📞</span>
                     <div>
                         <strong>24/7 Phone &amp; WhatsApp</strong>
-                        <a href="tel:+51984123456">+51 984 123 456</a>
+                        <a href="tel:+51915082539">(+51) 915 082 539</a>
                     </div>
                 </div>
 
@@ -136,7 +136,7 @@ include __DIR__ . '/includes/header.php';
                     </div>
                 </div>
 
-                <a href="https://wa.me/51984123456?text=Hello%20Unu%20Raymi,%20I%20would%20like%20information%20for%20a%20bespoke%20luxury%20journey" target="_blank" rel="noopener noreferrer" class="btn-hero-outline" style="width: 100%; justify-content: center; margin-top: 20px; font-size: 11px;">
+                <a href="https://wa.me/51915082539?text=Hello%20Unu%20Raymi,%20I%20would%20like%20information%20for%20a%20bespoke%20luxury%20journey" target="_blank" rel="noopener noreferrer" class="btn-hero-outline" style="width: 100%; justify-content: center; margin-top: 20px; font-size: 11px;">
                     Chat on WhatsApp ↗
                 </a>
             </div>
@@ -161,13 +161,13 @@ function submitCustomJourneyLead(e) {
     e.preventDefault();
     const form = e.target;
     const btn = form.querySelector('button[type="submit"]');
-    const feedback = form.querySelector('.kuoda-lead-feedback');
+    const feedback = form.querySelector('.unu-lead-feedback');
     const originalText = btn.textContent;
 
     btn.disabled = true;
     btn.textContent = 'Submitting...';
     feedback.style.display = 'none';
-    feedback.className = 'kuoda-lead-feedback';
+    feedback.className = 'unu-lead-feedback';
     feedback.innerHTML = '';
 
     const formData = new FormData(form);
@@ -195,19 +195,19 @@ function submitCustomJourneyLead(e) {
     .then(res => res.json())
     .then(json => {
         if (json.success) {
-            feedback.className = 'kuoda-lead-feedback success';
+            feedback.className = 'unu-lead-feedback success';
             feedback.innerHTML = `<strong>Thank you, ${payload.first_name}!</strong> Your bespoke inquiry has been received. Our private travel designers in Cusco will craft your personalized journey and contact you within 24 hours.`;
             feedback.style.display = 'block';
             form.reset();
             feedback.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         } else {
-            feedback.className = 'kuoda-lead-feedback error';
+            feedback.className = 'unu-lead-feedback error';
             feedback.innerHTML = '✕ ' + (json.error || 'There was an error submitting your request. Please try again.');
             feedback.style.display = 'block';
         }
     })
     .catch(err => {
-        feedback.className = 'kuoda-lead-feedback error';
+        feedback.className = 'unu-lead-feedback error';
         feedback.innerHTML = '✕ Connection error. Please try again or reach out directly via WhatsApp.';
         feedback.style.display = 'block';
     })

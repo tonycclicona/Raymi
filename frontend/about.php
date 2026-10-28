@@ -10,7 +10,7 @@ $current_page = 'about';
 include __DIR__ . '/includes/header.php';
 ?>
 
-<!-- 1. FULL-SCREEN ADAPTIVE HERO BANNER (Kuoda Travel 100vh Standard) -->
+<!-- 1. FULL-SCREEN ADAPTIVE HERO BANNER -->
 <section class="subpage-hero content__banner" style="background-image: url('/assets/img/heroes/about-hero.webp');">
     <div class="subpage-hero-content content__banner__text">
         
@@ -27,7 +27,7 @@ include __DIR__ . '/includes/header.php';
             GENUINE ANDEAN HOSPITALITY COMBINED WITH PRIVILEGED ARCHAEOLOGICAL &amp; CULTURAL ACCESS
         </p>
 
-        <!-- Kuoda Travel Action Buttons (Matched to Reference Image) -->
+        <!-- Hero Action Buttons -->
         <div class="subpage-hero-actions">
             <a href="#our-story" class="btn-hero-gold">
                 Our Story
@@ -124,7 +124,7 @@ include __DIR__ . '/includes/header.php';
                     </a>
                     
                     <div style="margin-top: 24px; padding-top: 18px; border-top: 1px solid var(--border); font-size: 12px; color: var(--text-muted); line-height: 1.6;">
-                        📞 Direct WhatsApp: +51 984 123 456<br>
+                        📞 Direct WhatsApp: (+51) 915 082 539<br>
                         ✉️ info@unu-raymi.com
                     </div>
                 </div>

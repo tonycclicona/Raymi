@@ -1,6 +1,6 @@
 # UNU RAYMI — Sistema Digital de Viajes de Lujo a Medida
 
-Portal web de ultralujo y sistema de gestión de contenidos (CMS/Admin) para **Unu Raymi** (`unu-raymi.com`), clonado y optimizado a partir de la ingeniería inversa de Kuoda Travel.
+Portal web de ultralujo y sistema de gestión de contenidos (CMS/Admin) para **Unu Raymi** (`unu-raymi.com`).
 
 ---
 
@@ -30,7 +30,7 @@ El proyecto está diseñado bajo un modelo de **cero costos recurrentes de licen
 │   ├── db-loader.php       -> Cargador dinámico de base de datos
 │   └── assets/             -> CSS y JS para modales y repetidores dinámicos
 ├── frontend/               -> Portal Público (unu-raymi.com/)
-│   ├── index.php           -> Portada cinematográfica estilo Kuoda Travel
+│   ├── index.php           -> Portada cinematográfica Unu Raymi
 │   ├── tours.php           -> Catálogo de itinerarios de lujo (/tours)
 │   ├── tour.php            -> Ficha detallada de tour con itinerario interactivo (/tour/{slug})
 │   ├── destinations.php    -> Catálogo de destinos por país (/destinations)
@@ -48,9 +48,9 @@ El proyecto está diseñado bajo un modelo de **cero costos recurrentes de licen
 
 ---
 
-## 🌟 Experiencia Cinematográfica Multi-Página (Estándar Kuoda Travel)
+## 🌟 Experiencia Cinematográfica Multi-Página (Estándar de Ultra Lujo)
 
-Toda la navegación sigue el estándar de lujo de Kuoda Travel:
+Toda la navegación sigue el más alto estándar de lujo:
 
 * **URLs Limpias y Amigables:** `/tours`, `/tour/machu-picchu-luxury-tours`, `/destinations/peru`, `/custom-journey`.
 * **Zero CORS:** Frontend, Admin y API comparten el mismo origen (`unu-raymi.com`), eliminando retardos de preflight OPTIONS y problemas de certificados SSL entre subdominios.

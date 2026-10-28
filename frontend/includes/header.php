@@ -1,7 +1,6 @@
 <?php
 /**
  * Unu Raymi - Global Header with Transparent Sticky Navbar & Visual Mega-Menus
- * Replicates Kuoda Travel's luxury minimalist standard
  */
 $current_page = $current_page ?? '';
 $page_title = $page_title ?? 'Unu Raymi | Bespoke Luxury Travel in Peru & South America';
@@ -262,9 +261,9 @@ $meta_desc = $meta_desc ?? 'Handcrafted ultra-luxury private journeys across Per
 
             <!-- Right Actions: Phone + CTA Button + Mobile Toggle -->
             <div class="nav-actions-right">
-                <a href="tel:+51984123456" class="nav-phone-link" title="Call or WhatsApp 24/7">
+                <a href="tel:+51915082539" class="nav-phone-link" title="Call or WhatsApp 24/7">
                     <span class="phone-icon">📞</span>
-                    <span class="phone-number">(+51) 984 123 456</span>
+                    <span class="phone-number">(+51) 915 082 539</span>
                 </a>
 
                 <a href="/custom-journey" class="cta-button nav-cta-btn">

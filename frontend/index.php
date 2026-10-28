@@ -1,6 +1,6 @@
 <?php
 /**
- * Unu Raymi - Main Homepage (Faithfully replicating Kuoda Travel architecture & sections)
+ * Unu Raymi - Main Homepage
  * Multi-page navigation (links directly to subpages, zero overlays)
  */
 
@@ -16,7 +16,7 @@ $current_page = 'home';
 include __DIR__ . '/includes/header.php';
 ?>
 
-<!-- 1. HERO BANNER SECTION (Clean Luxury Standard matching Kuoda Travel Image 2) -->
+<!-- 1. HERO BANNER SECTION -->
 <section class="hero-section" id="hero">
     <div class="hero-overlay"></div>
     <div class="container hero-container-clean">
@@ -46,7 +46,7 @@ include __DIR__ . '/includes/header.php';
     </a>
 </section>
 
-<!-- 2. CORPORATE INTRO & FORBES RECOGNITION (Kuoda Travel standard) -->
+<!-- 2. CORPORATE INTRO & FORBES RECOGNITION -->
 <section class="section" style="padding: 70px 0 40px; text-align: center; background: var(--bg-surface);">
     <div class="container" style="max-width: 900px;">
         <span class="section-tag">Bespoke Travel to South America</span>
@@ -67,7 +67,7 @@ include __DIR__ . '/includes/header.php';
     </div>
 </section>
 
-<!-- 3. THREE VALUE PILLARS (Kuoda Travel standard) -->
+<!-- 3. THREE VALUE PILLARS -->
 <section class="section" style="padding: 60px 0; background: var(--bg-dark);">
     <div class="container">
         <div class="trust-grid">
@@ -91,7 +91,7 @@ include __DIR__ . '/includes/header.php';
 </section>
 
 <?php
-// Signature Itineraries (Matching Kuoda Travel design in Image 2)
+// Signature Itineraries
 $signatureTours = [
     [
         'title' => 'INDULGING IN THE WATERS & WINES OF ARGENTINA',
@@ -138,7 +138,7 @@ $signatureTours = [
 ];
 ?>
 
-<!-- 4. SIGNATURE ITINERARIES (Kuoda Travel standard - Image 2) -->
+<!-- 4. SIGNATURE ITINERARIES -->
 <section id="signature-itineraries" class="signature-itineraries-section">
     <div class="sig-container">
         
@@ -199,7 +199,7 @@ $signatureTours = [
     </div>
 </section>
 
-<!-- 5. WHY TRAVEL WITH UNU RAYMI (Kuoda Travel standard) -->
+<!-- 5. WHY TRAVEL WITH UNU RAYMI -->
 <section id="por-que-nosotros" class="section trust-section">
     <div class="container">
         <div class="section-header">
@@ -231,7 +231,7 @@ $signatureTours = [
     </div>
 </section>
 
-<!-- 6. GUEST REVIEWS / TESTIMONIALS (Kuoda Travel standard) -->
+<!-- 6. GUEST REVIEWS / TESTIMONIALS -->
 <section class="section" style="background: var(--bg-surface);">
     <div class="container">
         <div class="section-header">
@@ -359,7 +359,7 @@ $signatureTours = [
     </div>
 </section>
 
-<!-- 9. PRESS & ACCREDITATIONS (Kuoda Travel standard) -->
+<!-- 9. PRESS & ACCREDITATIONS -->
 <section class="section" style="padding: 50px 0; background: var(--bg-dark); border-top: 1px solid var(--border);">
     <div class="container" style="text-align: center;">
         <span style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.2em; color: var(--text-muted); display: block; margin-bottom: 24px;">
@@ -375,18 +375,18 @@ $signatureTours = [
     </div>
 </section>
 
-<!-- 10. BESPOKE TRIP PLANNER LEAD GENERATION (Exact Kuoda Travel Reference Standard) -->
-<section id="contacto" class="kuoda-lead-section">
-    <div class="kuoda-lead-container">
-        <h3 class="kuoda-lead-title">
+<!-- 10. BESPOKE TRIP PLANNER LEAD GENERATION -->
+<section id="contacto" class="unu-lead-section">
+    <div class="unu-lead-container">
+        <h3 class="unu-lead-title">
             Start planning your bespoke luxury adventure with Unu Raymi today and explore Peru in the most personalized, elegant way possible.
         </h3>
 
         <form id="home-direct-lead-form" onsubmit="submitHomeDirectLead(event)">
-            <div class="kuoda-lead-grid">
+            <div class="unu-lead-grid">
                 <!-- Left Column -->
-                <div class="kuoda-lead-col">
-                    <select name="destination" class="kuoda-lead-input" required>
+                <div class="unu-lead-col">
+                    <select name="destination" class="unu-lead-input" required>
                         <option value="" disabled selected>Where would you like to go? *</option>
                         <option value="Peru">Peru</option>
                         <option value="Ecuador">Ecuador</option>
@@ -397,44 +397,44 @@ $signatureTours = [
                         <option value="More than one country">More than one country</option>
                     </select>
 
-                    <div class="kuoda-lead-split-row">
-                        <input type="text" name="travel_date" class="kuoda-lead-input" placeholder="When would you like to travel? *" required>
-                        <input type="text" name="trip_length" class="kuoda-lead-input" placeholder="Preferred length of trip? *" required>
+                    <div class="unu-lead-split-row">
+                        <input type="text" name="travel_date" class="unu-lead-input" placeholder="When would you like to travel? *" required>
+                        <input type="text" name="trip_length" class="unu-lead-input" placeholder="Preferred length of trip? *" required>
                     </div>
 
-                    <input type="text" name="travelers" class="kuoda-lead-input" placeholder="Number of travelers? *" required>
+                    <input type="text" name="travelers" class="unu-lead-input" placeholder="Number of travelers? *" required>
 
-                    <select name="accommodation" class="kuoda-lead-input" required>
+                    <select name="accommodation" class="unu-lead-input" required>
                         <option value="" disabled selected>Level of accommodations? *</option>
                         <option value="Luxury ( 5-star )">Luxury ( 5-star )</option>
                         <option value="Deluxe ( 4-star )">Deluxe ( 4-star )</option>
                         <option value="Boutique ( 3-star )">Boutique ( 3-star )</option>
                     </select>
 
-                    <input type="text" name="budget" class="kuoda-lead-input" placeholder="Budget (per person)?">
+                    <input type="text" name="budget" class="unu-lead-input" placeholder="Budget (per person)?">
                 </div>
 
                 <!-- Right Column -->
-                <div class="kuoda-lead-col">
-                    <input type="text" name="first_name" class="kuoda-lead-input" placeholder="First name *" required>
-                    <input type="text" name="last_name" class="kuoda-lead-input" placeholder="Last name*" required>
-                    <input type="email" name="email" class="kuoda-lead-input" placeholder="Email *" required>
-                    <input type="tel" name="phone" class="kuoda-lead-input" placeholder="Phone Number">
-                    <textarea name="notes" class="kuoda-lead-input kuoda-lead-textarea" placeholder="Additional comments?"></textarea>
+                <div class="unu-lead-col">
+                    <input type="text" name="first_name" class="unu-lead-input" placeholder="First name *" required>
+                    <input type="text" name="last_name" class="unu-lead-input" placeholder="Last name*" required>
+                    <input type="email" name="email" class="unu-lead-input" placeholder="Email *" required>
+                    <input type="tel" name="phone" class="unu-lead-input" placeholder="Phone Number">
+                    <textarea name="notes" class="unu-lead-input unu-lead-textarea" placeholder="Additional comments?"></textarea>
                 </div>
             </div>
 
-            <div class="kuoda-lead-submit-wrap">
-                <button type="submit" class="kuoda-lead-submit-btn">Submit</button>
+            <div class="unu-lead-submit-wrap">
+                <button type="submit" class="unu-lead-submit-btn">Submit</button>
             </div>
 
-            <div class="kuoda-lead-feedback" style="display: none;"></div>
+            <div class="unu-lead-feedback" style="display: none;"></div>
         </form>
     </div>
 </section>
 
 <script>
-// Signature Itineraries Carousel Controller (Kuoda standard - Image 2)
+// Signature Itineraries Carousel Controller
 let sigCurrentIndex = 0;
 const sigTotalCards = 6;
 
@@ -517,13 +517,13 @@ function submitHomeDirectLead(e) {
     e.preventDefault();
     const form = e.target;
     const btn = form.querySelector('button[type="submit"]');
-    const feedback = form.querySelector('.kuoda-lead-feedback');
+    const feedback = form.querySelector('.unu-lead-feedback');
     const originalText = btn.textContent;
 
     btn.disabled = true;
     btn.textContent = 'Submitting...';
     feedback.style.display = 'none';
-    feedback.className = 'kuoda-lead-feedback';
+    feedback.className = 'unu-lead-feedback';
     feedback.innerHTML = '';
 
     const formData = new FormData(form);
@@ -551,19 +551,19 @@ function submitHomeDirectLead(e) {
     .then(res => res.json())
     .then(json => {
         if (json.success) {
-            feedback.className = 'kuoda-lead-feedback success';
+            feedback.className = 'unu-lead-feedback success';
             feedback.innerHTML = `<strong>Thank you, ${payload.first_name}!</strong> Your bespoke inquiry has been received. Our private travel designers in Cusco will craft your personalized journey and contact you within 24 hours.`;
             feedback.style.display = 'block';
             form.reset();
             feedback.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         } else {
-            feedback.className = 'kuoda-lead-feedback error';
+            feedback.className = 'unu-lead-feedback error';
             feedback.innerHTML = '✕ ' + (json.error || 'There was an error submitting your request. Please try again.');
             feedback.style.display = 'block';
         }
     })
     .catch(err => {
-        feedback.className = 'kuoda-lead-feedback error';
+        feedback.className = 'unu-lead-feedback error';
         feedback.innerHTML = '✕ Connection error. Please try again or reach out directly via WhatsApp.';
         feedback.style.display = 'block';
     })

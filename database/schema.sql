@@ -15,7 +15,7 @@ CREATE TABLE IF NOT EXISTS `settings` (
   `tagline` VARCHAR(255) DEFAULT 'Bespoke Luxury Journeys to Peru & South America',
   `email` VARCHAR(150) NOT NULL DEFAULT 'concierge@unu-raymi.com',
   `phone` VARCHAR(50) DEFAULT '+51 84 263 456',
-  `whatsapp` VARCHAR(50) DEFAULT '+51 984 123 456',
+  `whatsapp` VARCHAR(50) DEFAULT '+51 915 082 539',
   `address` VARCHAR(255) DEFAULT 'Plaza Nazarenas 211, Cusco, Peru',
   `currency` VARCHAR(10) DEFAULT 'USD',
   `instagram` VARCHAR(255) DEFAULT 'https://instagram.com/unuraymitravel',

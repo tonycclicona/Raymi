@@ -176,7 +176,7 @@ def scrape_kuoda_tour(url):
     if not data["inclusions"]:
         data["inclusions"] = [
             "Personalized itinerary planning & dedicated private designer",
-            "A Kuoda host to assist you in every location 24/7",
+            "An Unu Raymi host to assist you in every location 24/7",
             "The majority of meals in the itinerary (gourmet & farm-to-table)",
             "Daily activities, luxury rail transfers, and private excursions as indicated"
         ]
