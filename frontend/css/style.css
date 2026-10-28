@@ -147,12 +147,17 @@ body:not(.page-home) {
 }
 
 .brand-logo-img {
-    height: 46px;
+    height: 64px;
     width: auto;
-    max-height: 48px;
+    max-height: 68px;
     object-fit: contain;
     display: block;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, height 0.3s ease;
+}
+
+.header-nav.scrolled .brand-logo-img {
+    height: 52px;
+    max-height: 54px;
 }
 
 .brand-logo:hover .brand-logo-img {

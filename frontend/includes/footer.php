@@ -10,7 +10,7 @@
                 <div class="footer-col">
                     <div class="brand-logo" style="margin-bottom: 20px;">
                         <a href="/" title="Unu Raymi Expeditions">
-                            <img src="/assets/img/logo-horizontal-light.png" alt="Unu Raymi Expeditions" class="brand-logo-img" style="height: 48px; width: auto;">
+                            <img src="/assets/img/logo.png" alt="Unu Raymi Expeditions" class="brand-logo-img" style="height: 64px; width: auto;">
                         </a>
                     </div>
                     <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.7; margin-bottom: 20px;">

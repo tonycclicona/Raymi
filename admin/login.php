@@ -48,7 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <div class="login-wrapper">
         <div class="login-card">
             <div class="login-brand" style="text-align: center; margin-bottom: 24px;">
-                <img src="/assets/img/logo-light.png" alt="Unu Raymi Expeditions" style="max-height: 85px; width: auto; margin-bottom: 12px; display: inline-block;">
+                <img src="/assets/img/logo.png" alt="Unu Raymi Expeditions" style="max-height: 95px; width: auto; margin-bottom: 12px; display: inline-block;">
                 <p class="brand-subtitle">Panel de Control & CMS de Viajes de Lujo</p>
                 <div class="admin-host-badge">unu-raymi.com/admin</div>
             </div>

@@ -47,7 +47,7 @@ $meta_desc = $meta_desc ?? 'Handcrafted ultra-luxury private journeys across Per
     <header class="header-nav" id="main-header-nav">
         <div class="container nav-inner">
             <a href="/" class="brand-logo" title="Unu Raymi Expeditions">
-                <img src="/assets/img/logo-horizontal-light.png" alt="Unu Raymi Expeditions" class="brand-logo-img" height="46">
+                <img src="/assets/img/logo.png" alt="Unu Raymi Expeditions" class="brand-logo-img" height="60">
             </a>
 
             <!-- Desktop Navigation Menu -->
@@ -286,7 +286,7 @@ $meta_desc = $meta_desc ?? 'Handcrafted ultra-luxury private journeys across Per
     <div class="mobile-drawer" id="mobile-drawer">
         <div class="mobile-drawer-header">
             <a href="/" class="brand-logo" title="Unu Raymi Expeditions">
-                <img src="/assets/img/logo-horizontal-light.png" alt="Unu Raymi Expeditions" class="brand-logo-img" style="height: 36px; width: auto;">
+                <img src="/assets/img/logo.png" alt="Unu Raymi Expeditions" class="brand-logo-img" style="height: 48px; width: auto;">
             </a>
             <button type="button" class="mobile-drawer-close" id="mobile-close" aria-label="Close">✕</button>
         </div>
