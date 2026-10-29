@@ -17,8 +17,7 @@
                         Curators of handcrafted bespoke luxury journeys in Peru, Chile, and South America. Designed for discerning travelers seeking authenticity, absolute privacy, and unforgettable moments.
                     </p>
                     <div style="font-size: 12px; color: var(--text-muted); line-height: 1.6;">
-                        📍 Plaza Nazarenas 211, Historic Center, Cusco, Peru<br>
-                        🏢 International Office: Florida, USA
+                        📍 Marcavalle c10 villa periodista, Cusco, Peru<br>
                     </div>
                 </div>
 

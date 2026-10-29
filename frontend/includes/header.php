@@ -30,7 +30,7 @@ $meta_desc = $meta_desc ?? 'Handcrafted ultra-luxury private journeys across Per
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
     <link rel="manifest" href="/site.webmanifest">
-    <meta name="theme-color" content="#090C11">
+    <meta name="theme-color" content="#FBF9F5">
 
     <!-- Global Stylesheet -->
     <link rel="stylesheet" href="/css/style.css">

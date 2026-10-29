@@ -4,26 +4,26 @@
    ========================================================================== */
 
 :root {
-    --bg-dark: #090C11;
-    --bg-surface: #111622;
-    --bg-surface-elevated: #182030;
-    --gold: #D4AF37;
-    --gold-light: #F7E7B4;
-    --gold-dark: #9E7D22;
-    --gold-glow: rgba(212, 175, 55, 0.25);
+    --bg-dark: #FBF9F5;
+    --bg-surface: #FFFFFF;
+    --bg-surface-elevated: #F3EEEA;
+    --gold: #9A6615;
+    --gold-light: #B8822B;
+    --gold-dark: #704709;
+    --gold-glow: rgba(154, 102, 21, 0.16);
     --terracotta: #A85832;
-    --sand: #F7F5F0;
-    --text-primary: #FFFFFF;
-    --text-secondary: #B4BCD0;
-    --text-muted: #6B768E;
-    --border: rgba(255, 255, 255, 0.08);
-    --border-gold: rgba(212, 175, 55, 0.35);
+    --sand: #1D1E20;
+    --text-primary: #1D1E20;
+    --text-secondary: #52565C;
+    --text-muted: #7E848E;
+    --border: rgba(0, 0, 0, 0.08);
+    --border-gold: rgba(154, 102, 21, 0.32);
     --font-serif: 'Cinzel', serif;
     --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     --radius-sm: 6px;
     --radius-md: 12px;
     --radius-lg: 20px;
-    --shadow-deep: 0 20px 50px rgba(0, 0, 0, 0.8);
+    --shadow-deep: 0 15px 40px rgba(0, 0, 0, 0.07);
     --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -111,12 +111,39 @@ body:not(.page-home) {
 
 /* Scrolled state: distinctive, non-intrusive luxury glass */
 .header-nav.scrolled {
-    background: rgba(9, 12, 17, 0.94);
+    background: rgba(251, 249, 245, 0.96);
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
     height: 72px;
-    border-bottom: 1px solid rgba(212, 175, 55, 0.22);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    border-bottom: 1px solid rgba(154, 102, 21, 0.18);
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.06);
+}
+
+.header-nav.scrolled .nav-link {
+    color: #2A2C30;
+}
+
+.header-nav.scrolled .nav-link:hover,
+.header-nav.scrolled .nav-item-dropdown:hover > .nav-link,
+.header-nav.scrolled .nav-item-dropdown.is-active > .nav-link,
+.header-nav.scrolled .nav-item-dropdown.menu-open > .nav-link {
+    color: #9A6615;
+    background: rgba(154, 102, 21, 0.08);
+    border-color: rgba(154, 102, 21, 0.25);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+    text-shadow: none;
+}
+
+.header-nav.scrolled .nav-phone-link {
+    color: #2A2C30;
+}
+
+.header-nav.scrolled .nav-phone-link:hover {
+    color: #9A6615;
+}
+
+.header-nav.scrolled .mobile-nav-toggle span {
+    background: #1D1E20;
 }
 
 .header-nav.scrolled::before {
@@ -953,9 +980,9 @@ body:not(.page-home) {
     flex-direction: column;
     justify-content: flex-end;
     text-decoration: none !important;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    background: #090C11;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    background: #FFFFFF;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
     transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
                 box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
                 border-color 0.4s ease;
@@ -1175,7 +1202,7 @@ body:not(.page-home) {
    Trust & Difference Pillar
    ========================================================================== */
 .trust-section {
-    background: radial-gradient(circle at center, #141A28 0%, var(--bg-dark) 100%);
+    background: #F4EFEA;
     border-top: 1px solid var(--border);
     border-bottom: 1px solid var(--border);
 }
@@ -1205,9 +1232,23 @@ body:not(.page-home) {
    Footer
    ========================================================================== */
 .site-footer {
-    background: #06080C;
-    border-top: 1px solid var(--border);
+    background: #1C1917;
+    color: #E7E5E4;
+    border-top: 1px solid rgba(154, 102, 21, 0.25);
     padding: 80px 0 40px;
+}
+
+.site-footer .footer-col a {
+    color: #A8A29E;
+}
+
+.site-footer .footer-col a:hover {
+    color: #D4AF37;
+}
+
+.site-footer .footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    color: #78716C;
 }
 
 .footer-grid {
@@ -3689,10 +3730,13 @@ textarea.form-control {
 
 /* Why Travel with us (Dark / Elegant) */
 .dest-why-section {
-    background: #111622;
-    color: #FFF;
+    background: #F3EEEA;
+    color: #1D1E20;
     padding: 95px 0 85px;
-    border-top: 1px solid rgba(255,255,255,0.06);
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+.dest-why-section h2 {
+    color: #1D1E20 !important;
 }
 .dest-why-grid {
     display: grid;
@@ -3701,12 +3745,19 @@ textarea.form-control {
     margin-top: 45px;
 }
 .dest-why-card {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.08);
     padding: 32px 22px;
     border-radius: 4px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
     transition: transform 0.3s ease, border-color 0.3s ease;
     text-align: center;
+}
+.dest-why-card h4 {
+    color: #1D1E20 !important;
+}
+.dest-why-card p {
+    color: #55595F !important;
 }
 .dest-why-card:hover {
     transform: translateY(-5px);
@@ -5273,3 +5324,24 @@ textarea.kuoda-lead-input.kuoda-lead-textarea, textarea.unu-lead-input.unu-lead-
 }
 
 
+
+
+/* General Highlight Cards & Reviews Cards */
+.highlight-card {
+    background: #FFFFFF !important;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+    border-radius: var(--radius-sm);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.highlight-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--gold) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+.highlight-card div, .highlight-card p {
+    color: #1D1E20;
+}
+.highlight-card p {
+    color: #52565C !important;
+}

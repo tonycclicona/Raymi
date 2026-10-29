@@ -526,7 +526,7 @@ $countryHeroBg = ($isPeru && file_exists(__DIR__ . '/assets/img/heroes/peru-dest
 </section>
 
 <!-- 10. EXPLORE OTHER SOUTH AMERICAN COUNTRIES -->
-<section class="section" style="background: #111622; border-top: 1px solid rgba(255,255,255,0.06); padding: 75px 0;">
+<section class="section" style="background: var(--bg-surface-elevated); border-top: 1px solid var(--border); padding: 75px 0;">
     <div class="container">
         <div style="text-align: center; margin-bottom: 30px;">
             <span class="section-tag" style="color: var(--gold); font-size: 11px; letter-spacing: 0.25em; text-transform: uppercase;">

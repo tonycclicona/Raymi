@@ -58,7 +58,7 @@ include __DIR__ . '/includes/header.php';
         </p>
 
         <!-- Forbes Banner Badge -->
-        <div class="forbes-banner-badge" style="display: inline-flex; align-items: center; gap: 16px; padding: 14px 28px; background: rgba(212,175,55,0.08); border: 1px solid var(--border-gold); border-radius: 8px;">
+        <div class="forbes-banner-badge" style="display: inline-flex; align-items: center; gap: 16px; padding: 14px 28px; background: rgba(154,102,21,0.08); border: 1px solid rgba(154,102,21,0.22); border-radius: 8px;">
             <span style="font-size: 20px; font-family: var(--font-serif); color: var(--gold-light); font-weight: 700; letter-spacing: 0.1em;">Forbes</span>
             <span style="font-size: 13px; color: var(--text-primary); text-align: left;">
                 <em>"The expert guide to luxury bespoke travel in Peru and the Sacred Valley"</em>
@@ -73,17 +73,17 @@ include __DIR__ . '/includes/header.php';
         <div class="trust-grid">
             <div class="trust-item">
                 <span style="font-size: 32px; display: block; margin-bottom: 12px;">🧭</span>
-                <h3 style="font-size: 18px; color: #FFF; margin-bottom: 10px;">CURATED JOURNEYS</h3>
+                <h3 style="font-size: 18px; color: var(--text-primary); margin-bottom: 10px;">CURATED JOURNEYS</h3>
                 <p>100% individualized itineraries. No two journeys are alike; we adapt every day to your passions, culinary tastes, and rhythm.</p>
             </div>
             <div class="trust-item">
                 <span style="font-size: 32px; display: block; margin-bottom: 12px;">🏛️</span>
-                <h3 style="font-size: 18px; color: #FFF; margin-bottom: 10px;">AUTHENTIC EXPERIENCES</h3>
+                <h3 style="font-size: 18px; color: var(--text-primary); margin-bottom: 10px;">AUTHENTIC EXPERIENCES</h3>
                 <p>After-hours access to Incan sanctuaries, intimate encounters with master artisans, and the region's finest scholar historian guides.</p>
             </div>
             <div class="trust-item">
                 <span style="font-size: 32px; display: block; margin-bottom: 12px;">💧</span>
-                <h3 style="font-size: 18px; color: #FFF; margin-bottom: 10px;">TRAVEL RESPONSIBLY</h3>
+                <h3 style="font-size: 18px; color: var(--text-primary); margin-bottom: 10px;">TRAVEL RESPONSIBLY</h3>
                 <p>Active commitment to clean water conservation and rural education in Quechua communities through our social initiative, Yaku Kunan.</p>
             </div>
         </div>
@@ -213,7 +213,7 @@ $signatureTours = [
         <div class="trust-grid">
             <div class="trust-item">
                 <h4>✦ 100% On-the-Ground Cusco Operations</h4>
-                <p>Our headquarters in Plaza Nazarenas supervises your journey in real time, ensuring immediate 24/7 assistance.</p>
+                <p>Our headquarters 239 San Agustin Street, Cusco, 3 blocks from the Plaza de Armas supervises your journey in real time, ensuring immediate 24/7 assistance.</p>
             </div>
             <div class="trust-item">
                 <h4>✦ Scholar Historian Guides</h4>
@@ -248,7 +248,7 @@ $signatureTours = [
                 <p style="font-style: italic; font-size: 14px; line-height: 1.8; color: var(--text-secondary); margin-bottom: 16px;">
                     "Our anniversary journey through the Sacred Valley, Machu Picchu, and Atacama was a true masterpiece. The Unu Raymi team made us feel like Andean royalty. Simply unbeatable."
                 </p>
-                <div style="color: #FFF; font-weight: 600; font-size: 13px;">— Robert &amp; Claire Vance</div>
+                <div style="color: var(--text-primary); font-weight: 600; font-size: 13px;">— Robert &amp; Claire Vance</div>
                 <span style="color: var(--text-muted); font-size: 11px;">San Francisco, California • TripAdvisor Travelers' Choice</span>
             </div>
 
@@ -257,7 +257,7 @@ $signatureTours = [
                 <p style="font-style: italic; font-size: 14px; line-height: 1.8; color: var(--text-secondary); margin-bottom: 16px;">
                     "The family expedition on the Amazon luxury cruise and the Belmond Hiram Bingham train will remain etched in our children's hearts forever. Flawless attention to detail at every step."
                 </p>
-                <div style="color: #FFF; font-weight: 600; font-size: 13px;">— Elena &amp; Mateo Rossi</div>
+                <div style="color: var(--text-primary); font-weight: 600; font-size: 13px;">— Elena &amp; Mateo Rossi</div>
                 <span style="color: var(--text-muted); font-size: 11px;">Milan, Italy • Verified Trustpilot Review</span>
             </div>
 
@@ -266,7 +266,7 @@ $signatureTours = [
                 <p style="font-style: italic; font-size: 14px; line-height: 1.8; color: var(--text-secondary); margin-bottom: 16px;">
                     "We completed the Salkantay Lodge Trek and the logistics were perfection. The guides knew precisely how to navigate trails away from crowds. 100% recommended."
                 </p>
-                <div style="color: #FFF; font-weight: 600; font-size: 13px;">— Jonathan Wright</div>
+                <div style="color: var(--text-primary); font-weight: 600; font-size: 13px;">— Jonathan Wright</div>
                 <span style="color: var(--text-muted); font-size: 11px;">Melbourne, Australia • Google 5-Star Review</span>
             </div>
         </div>

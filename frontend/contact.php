@@ -104,19 +104,19 @@ include __DIR__ . '/includes/header.php';
 </section>
 
 <!-- 3. CONCIERGE & CUSCO HEADQUARTERS INFORMATION -->
-<section class="section" style="padding: 70px 0; background: #090C11; border-top: 1px solid rgba(255,255,255,0.06);">
+<section class="section" style="padding: 70px 0; background: var(--bg-surface-elevated); border-top: 1px solid var(--border);">
     <div class="container" style="max-width: 980px;">
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
             
             <div class="contact-info-card" style="margin: 0;">
                 <span class="section-tag" style="margin-bottom: 8px;">Direct Contact</span>
-                <h3 style="font-size: 20px; color: #FFF; margin-bottom: 22px; font-family: 'Playfair Display', Georgia, serif;">Cusco Headquarters</h3>
+                <h3 style="font-size: 20px; color: var(--text-primary); margin-bottom: 22px; font-family: 'Playfair Display', Georgia, serif;">Cusco Headquarters</h3>
                 
                 <div class="contact-channel">
                     <span class="icon">📍</span>
                     <div>
                         <strong>Physical Address</strong>
-                        <span>Plaza Nazarenas 211, Historic Center, Cusco, Peru</span>
+                        <span>Marcavalle c10 villa periodista, Cusco, Peru</span>
                     </div>
                 </div>
 
@@ -132,7 +132,7 @@ include __DIR__ . '/includes/header.php';
                     <span class="icon">✉️</span>
                     <div>
                         <strong>Direct Inquiries</strong>
-                        <a href="mailto:info@unu-raymi.com">info@unu-raymi.com</a>
+                        <a href="mailto:reservas@unu-raymi.com">reservas@unu-raymi.com</a>
                     </div>
                 </div>
 

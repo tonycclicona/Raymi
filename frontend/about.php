@@ -57,7 +57,7 @@ include __DIR__ . '/includes/header.php';
                             Unu Raymi was founded on an unshakeable conviction: genuine contemporary luxury does not lie in excess, but in authenticity, the exclusivity of time, and access to intimate encounters that cannot be bought in mass-market travel catalogs.
                         </p>
                         <p>
-                            Headquartered in Cusco's historic Plaza Nazarenas, our team comprises native journey designers, master archaeologists, historians, and local concierges who know every secret trail, every sacred Incan hall, and every remote corner of the Andes and Patagonia.
+                            Headquartered in 239 San Agustin Street, Cusco, 3 blocks from the Plaza de Armas, our team comprises native journey designers, master archaeologists, historians, and local concierges who know every secret trail, every sacred Incan hall, and every remote corner of the Andes and Patagonia.
                         </p>
                     </div>
                 </div>
