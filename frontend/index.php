@@ -71,19 +71,19 @@ include __DIR__ . '/includes/header.php';
 <section class="section" style="padding: 60px 0; background: var(--bg-dark);">
     <div class="container">
         <div class="trust-grid">
-            <div class="trust-item">
+            <div class="trust-item" style="background: #FFFFFF; padding: 32px 24px; border-radius: 6px; border: 1px solid rgba(0,0,0,0.06); box-shadow: 0 4px 16px rgba(0,0,0,0.03);">
                 <span style="font-size: 32px; display: block; margin-bottom: 12px;">🧭</span>
-                <h3 style="font-size: 18px; color: var(--text-primary); margin-bottom: 10px;">CURATED JOURNEYS</h3>
+                <h3 style="font-size: 17px; color: #1D1E20; margin-bottom: 8px; font-weight: 700;">CURATED JOURNEYS</h3>
                 <p>100% individualized itineraries. No two journeys are alike; we adapt every day to your passions, culinary tastes, and rhythm.</p>
             </div>
-            <div class="trust-item">
+            <div class="trust-item" style="background: #FFFFFF; padding: 32px 24px; border-radius: 6px; border: 1px solid rgba(0,0,0,0.06); box-shadow: 0 4px 16px rgba(0,0,0,0.03);">
                 <span style="font-size: 32px; display: block; margin-bottom: 12px;">🏛️</span>
-                <h3 style="font-size: 18px; color: var(--text-primary); margin-bottom: 10px;">AUTHENTIC EXPERIENCES</h3>
+                <h3 style="font-size: 17px; color: #1D1E20; margin-bottom: 8px; font-weight: 700;">AUTHENTIC EXPERIENCES</h3>
                 <p>After-hours access to Incan sanctuaries, intimate encounters with master artisans, and the region's finest scholar historian guides.</p>
             </div>
-            <div class="trust-item">
+            <div class="trust-item" style="background: #FFFFFF; padding: 32px 24px; border-radius: 6px; border: 1px solid rgba(0,0,0,0.06); box-shadow: 0 4px 16px rgba(0,0,0,0.03);">
                 <span style="font-size: 32px; display: block; margin-bottom: 12px;">💧</span>
-                <h3 style="font-size: 18px; color: var(--text-primary); margin-bottom: 10px;">TRAVEL RESPONSIBLY</h3>
+                <h3 style="font-size: 17px; color: #1D1E20; margin-bottom: 8px; font-weight: 700;">TRAVEL RESPONSIBLY</h3>
                 <p>Active commitment to clean water conservation and rural education in Quechua communities through our social initiative, Yaku Kunan.</p>
             </div>
         </div>
@@ -366,11 +366,11 @@ $signatureTours = [
             ✦ International Recognition &amp; Quality Seals
         </span>
         <div style="display: flex; justify-content: center; align-items: center; gap: 48px; flex-wrap: wrap; opacity: 0.75;">
-            <span style="font-family: var(--font-serif); font-size: 22px; color: #FFF; font-weight: 700; letter-spacing: 0.1em;">Forbes</span>
-            <span style="font-family: var(--font-serif); font-size: 20px; color: #FFF; letter-spacing: 0.05em;">The New York Times</span>
-            <span style="font-family: var(--font-serif); font-size: 20px; color: #FFF; letter-spacing: 0.05em;">CNN Travel</span>
-            <span style="font-family: var(--font-serif); font-size: 18px; color: #FFF; letter-spacing: 0.05em;">Condé Nast Traveler</span>
-            <span style="font-family: var(--font-serif); font-size: 16px; color: var(--gold-light); letter-spacing: 0.1em;">TripAdvisor 2026</span>
+            <span style="font-family: var(--font-serif); font-size: 22px; color: #1D1E20; font-weight: 700; letter-spacing: 0.1em;">Forbes</span>
+            <span style="font-family: var(--font-serif); font-size: 20px; color: #2B2E33; letter-spacing: 0.05em;">The New York Times</span>
+            <span style="font-family: var(--font-serif); font-size: 20px; color: #2B2E33; letter-spacing: 0.05em;">CNN Travel</span>
+            <span style="font-family: var(--font-serif); font-size: 18px; color: #2B2E33; letter-spacing: 0.05em;">Condé Nast Traveler</span>
+            <span style="font-family: var(--font-serif); font-size: 16px; color: var(--gold); letter-spacing: 0.1em;">TripAdvisor 2026</span>
         </div>
     </div>
 </section>

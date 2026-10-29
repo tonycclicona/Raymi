@@ -678,9 +678,9 @@ body:not(.page-home) {
 }
 
 .filter-pill {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid var(--border);
-    color: var(--sand);
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    color: #2D3139;
     font-size: 13px;
     font-weight: 600;
     padding: 9px 20px;
@@ -690,19 +690,21 @@ body:not(.page-home) {
     display: inline-flex;
     align-items: center;
     gap: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
 }
 
 .filter-pill:hover {
     border-color: var(--gold);
-    color: var(--gold-light);
+    color: var(--gold);
+    background: #FAF8F5;
     transform: translateY(-2px);
 }
 
 .filter-pill.active {
-    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
-    color: #090C11;
-    border-color: var(--gold);
-    box-shadow: 0 4px 15px var(--gold-glow);
+    background: var(--gold) !important;
+    color: #FFFFFF !important;
+    border-color: var(--gold) !important;
+    box-shadow: 0 4px 14px var(--gold-glow) !important;
 }
 
 .cta-button {
@@ -908,11 +910,11 @@ body:not(.page-home) {
 }
 
 .btn-outline-gold {
-    background: transparent;
-    border: 1px solid var(--gold);
-    color: var(--gold-light);
+    background: #FFFFFF;
+    border: 1.5px solid var(--gold);
+    color: var(--gold);
     font-size: 12px;
-    font-weight: 600;
+    font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.14em;
     padding: 13px 26px;
@@ -922,9 +924,10 @@ body:not(.page-home) {
 }
 
 .btn-outline-gold:hover {
-    background: rgba(212, 175, 55, 0.1);
-    border-color: var(--gold-light);
-    color: #FFF;
+    background: var(--gold);
+    border-color: var(--gold);
+    color: #FFFFFF;
+    box-shadow: 0 4px 14px var(--gold-glow);
 }
 
 /* ==========================================================================
@@ -1219,8 +1222,9 @@ body:not(.page-home) {
 
 .trust-item h4 {
     font-size: 18px;
-    color: var(--gold-light);
+    color: var(--gold);
     margin-bottom: 12px;
+    font-weight: 700;
 }
 
 .trust-item p {
@@ -4896,14 +4900,18 @@ select option {
 }
 
 .cta-button {
-    background: linear-gradient(135deg, #D4AF37 0%, #9E7D22 100%) !important;
-    color: #090C11 !important;
+    background: #9A6615 !important;
+    color: #FFFFFF !important;
+    border: 1px solid #9A6615 !important;
     font-weight: 700 !important;
+    box-shadow: 0 4px 14px rgba(154, 102, 21, 0.25) !important;
 }
 
 .cta-button:hover {
-    color: #090C11 !important;
-    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.45) !important;
+    background: #B8822B !important;
+    border-color: #B8822B !important;
+    color: #FFFFFF !important;
+    box-shadow: 0 6px 20px rgba(154, 102, 21, 0.40) !important;
 }
 
 /* 13. Category selector on Tours Catalog */
@@ -4912,8 +4920,9 @@ select option {
     justify-content: space-between;
     align-items: center;
     padding: 18px 24px;
-    background: #111622;
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
     border-radius: 8px;
     margin-bottom: 35px;
     flex-wrap: wrap;
@@ -4921,7 +4930,7 @@ select option {
 }
 
 .category-selector-group label {
-    color: var(--gold-light, #F7E7B4) !important;
+    color: #1D1E20 !important;
     font-size: 12px !important;
     font-weight: 600 !important;
     text-transform: uppercase !important;
@@ -4929,34 +4938,36 @@ select option {
 }
 
 .category-selector-group select {
-    background: #182030 !important;
-    color: #FFFFFF !important;
-    border: 1px solid rgba(212, 175, 55, 0.4) !important;
+    background: #F8F6F2 !important;
+    color: #1D1E20 !important;
+    border: 1px solid rgba(154, 102, 21, 0.35) !important;
     border-radius: 4px !important;
     padding: 8px 16px !important;
     font-size: 13px !important;
 }
 
 .view-mode-switcher span {
-    color: #B4BCD0 !important;
+    color: #52565C !important;
 }
 
 .view-mode-btn {
-    background: #182030 !important;
-    color: #B4BCD0 !important;
-    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    background: #F4EFEA !important;
+    color: #52565C !important;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+    font-weight: 600 !important;
 }
 
 .view-mode-btn:hover {
-    color: #FFFFFF !important;
-    border-color: rgba(212, 175, 55, 0.4) !important;
+    color: #1D1E20 !important;
+    background: #EDE6DF !important;
+    border-color: rgba(154, 102, 21, 0.4) !important;
 }
 
 .view-mode-btn.active {
-    background: #D4AF37 !important;
-    color: #090C11 !important;
+    background: #9A6615 !important;
+    color: #FFFFFF !important;
     font-weight: 700 !important;
-    border-color: #D4AF37 !important;
+    border-color: #9A6615 !important;
 }
 
 /* ==========================================================================
@@ -5019,20 +5030,20 @@ a.cta-button {
 .btn-hero-gold,
 .nav-cta-btn,
 .cta-button {
-    background: #D4AF37 !important;
-    color: #1A1A1A !important;
-    border: 1px solid #D4AF37 !important;
-    box-shadow: 0 4px 14px rgba(212, 175, 55, 0.28) !important;
+    background: #9A6615 !important;
+    color: #FFFFFF !important;
+    border: 1px solid #9A6615 !important;
+    box-shadow: 0 4px 14px rgba(154, 102, 21, 0.28) !important;
 }
 .hero-btn-explore:hover,
 .btn-hero-gold:hover,
 .nav-cta-btn:hover,
 .cta-button:hover {
-    background: #E5C358 !important;
-    color: #000000 !important;
-    border-color: #E5C358 !important;
+    background: #B8822B !important;
+    color: #FFFFFF !important;
+    border-color: #B8822B !important;
     transform: translateY(-2px) !important;
-    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.45) !important;
+    box-shadow: 0 6px 20px rgba(154, 102, 21, 0.45) !important;
 }
 
 /* Dark Charcoal Glass Variant ("DISEÑAR MI VIAJE" in Hero / Secondary CTAs) */
@@ -5073,17 +5084,19 @@ a.cta-button {
 
 /* Outline Gold Variant */
 .btn-outline-gold {
-    background: transparent !important;
-    color: #E6C875 !important;
-    border: 1px solid rgba(212, 175, 55, 0.6) !important;
+    background: #FFFFFF !important;
+    color: #9A6615 !important;
+    border: 1.5px solid #9A6615 !important;
     padding: 11px 24px !important;
     min-height: 40px !important;
+    box-shadow: 0 2px 8px rgba(154, 102, 21, 0.08) !important;
 }
 .btn-outline-gold:hover {
-    background: rgba(212, 175, 55, 0.15) !important;
-    border-color: #E6C875 !important;
+    background: #9A6615 !important;
+    border-color: #9A6615 !important;
     color: #FFFFFF !important;
     transform: translateY(-2px) !important;
+    box-shadow: 0 6px 18px rgba(154, 102, 21, 0.25) !important;
 }
 
 /* Tour Card Discover CTA Button */
