@@ -32,8 +32,8 @@ $meta_desc = $meta_desc ?? 'Handcrafted ultra-luxury private journeys across Per
     <link rel="manifest" href="/site.webmanifest">
     <meta name="theme-color" content="#FBF9F5">
 
-    <!-- Global Stylesheet -->
-    <link rel="stylesheet" href="/css/style.css">
+    <!-- Global Stylesheet (Cache-Busting for Instant CDN/Browser Updates) -->
+    <link rel="stylesheet" href="/css/style.css?v=<?php echo file_exists(__DIR__ . '/../css/style.css') ? filemtime(__DIR__ . '/../css/style.css') : (file_exists($_SERVER['DOCUMENT_ROOT'] . '/css/style.css') ? filemtime($_SERVER['DOCUMENT_ROOT'] . '/css/style.css') : time()); ?>">
 
     <!-- Global API Configuration -->
     <script>
