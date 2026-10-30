@@ -49,13 +49,16 @@ include __DIR__ . '/includes/header.php';
     <div class="container" style="max-width: 900px;">
         <div class="tour-block">
             <span class="section-tag">Signature Initiative</span>
-            <h2 class="block-title">The Yaku Kunan Project: Water and Ancestral Wisdom</h2>
+            <h2 class="block-title">Living Roots of the Andes: A Journey with Purpose</h2>
             <div class="tour-narrative">
-                <p>
-                    In the Quechua language, <em>Yaku Kunan</em> translates to <em>"Water Now"</em>. A dedicated portion of every journey booked with Unu Raymi is directly channeled to community water infrastructure and the restoration of traditional Incan qochas (ancestral rainwater retention reservoirs) in isolated high-Andean communities of Cusco and the Sacred Valley.
-                </p>
-                <p>
-                    Furthermore, we actively support rural bilingual primary schools with classroom supplies and fund traditional textile masterclasses taught by elder master weavers to ensure ancient textile wisdom thrives for generations to come.
+                <p style="text-align: justify; hyphens: auto;">
+                    At Unu Raymi Travel Agency, we believe that every trip can become an opportunity to value and preserve the cultural richness of the Andes.
+
+That is why we are developing Living Roots of the Andes, an initiative aimed at connecting our travelers with the traditions, ancestral knowledge, and talent of local communities.
+
+Our purpose is to promote authentic experiences that give visibility to the work of artisans, encourage respect for cultural heritage, and foster a more conscious and responsible tourism.
+
+Because discovering the Andes also means valuing those who keep its essence alive.
                 </p>
             </div>
         </div>

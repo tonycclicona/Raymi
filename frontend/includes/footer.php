@@ -51,11 +51,11 @@
                     <h5>Contact & 24/7 Concierge</h5>
                     <p style="font-size: 13px; color: var(--text-secondary); margin-bottom: 12px;">
                         On-the-Ground WhatsApp:<br>
-                        <strong style="color: var(--gold-light);">(+51) 915 082 539</strong>
+                        <a href="https://wa.me/51915082539">(+51) 915 082 539</a>
                     </p>
                     <p style="font-size: 13px; color: var(--text-secondary); margin-bottom: 20px;">
                         Travel Designer Email:<br>
-                        <a href="mailto:info@unu-raymi.com">info@unu-raymi.com</a>
+                        <a href="mailto:reservas@unu-raymi.com">reservas@unu-raymi.com</a>
                     </p>
                     <a href="/custom-journey" class="cta-button" style="display:block; text-align:center; width:100%;">
                         Plan My Custom Trip

@@ -261,7 +261,7 @@ $meta_desc = $meta_desc ?? 'Handcrafted ultra-luxury private journeys across Per
 
             <!-- Right Actions: Phone + CTA Button + Mobile Toggle -->
             <div class="nav-actions-right">
-                <a href="tel:+51915082539" class="nav-phone-link" title="Call or WhatsApp 24/7">
+                <a  href="https://wa.me/51915082539" class="nav-phone-link" title="Call or WhatsApp 24/7">
                     <span class="phone-icon">📞</span>
                     <span class="phone-number">(+51) 915 082 539</span>
                 </a>

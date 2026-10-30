@@ -2001,6 +2001,8 @@ body:not(.page-home) {
     color: var(--text-secondary);
     font-size: 15px;
     line-height: 1.8;
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 /* Itinerary Accordion */
@@ -3539,6 +3541,8 @@ textarea.form-control {
     color: #5D5257;
     line-height: 1.8;
     margin-bottom: 40px;
+    text-align: justify;
+    text-justify: inter-word;
 }
 .dest-stats-grid {
     display: grid;
@@ -4231,6 +4235,8 @@ textarea.form-control {
     font-size: 14.5px;
     color: #4A4A4A;
     line-height: 1.75;
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 /* Lead Capture Section ("Your Trip Begins Here") */
@@ -4664,6 +4670,8 @@ h1.sub__title,
     color: #382A30 !important;
     font-size: 15px !important;
     line-height: 1.8 !important;
+    text-align: justify !important;
+    text-justify: inter-word !important;
 }
 
 .tour-route-point {
@@ -4709,12 +4717,16 @@ h1.sub__title,
     font-size: 20px !important;
     font-weight: 600 !important;
     margin-bottom: 12px !important;
+    text-align: justify !important;
+    text-justify: inter-word !important;
 }
 
 .tour-day-narrative {
     color: #382A30 !important;
     font-size: 14.5px !important;
     line-height: 1.75 !important;
+    text-align: justify !important;
+    text-justify: inter-word !important;
 }
 
 .tour-day-narrative p {
