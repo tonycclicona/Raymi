@@ -1233,26 +1233,28 @@ body:not(.page-home) {
 }
 
 /* ==========================================================================
-   Footer
+   Footer (Light Andean Linen & Warm Antique Gold)
    ========================================================================== */
 .site-footer {
-    background: #1C1917;
-    color: #E7E5E4;
-    border-top: 1px solid rgba(154, 102, 21, 0.25);
+    background: #F4EFEB;
+    color: #2D3139;
+    border-top: 1px solid rgba(154, 102, 21, 0.22);
     padding: 80px 0 40px;
 }
 
 .site-footer .footer-col a {
-    color: #A8A29E;
+    color: #4B5058;
+    text-decoration: none;
+    transition: color 0.25s ease;
 }
 
 .site-footer .footer-col a:hover {
-    color: #D4AF37;
+    color: #9A6615;
 }
 
 .site-footer .footer-bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
-    color: #78716C;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    color: #6B7280;
 }
 
 .footer-grid {
@@ -1292,9 +1294,9 @@ body:not(.page-home) {
     justify-content: space-between;
     align-items: center;
     padding-top: 30px;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
     font-size: 12px;
-    color: var(--text-muted);
+    color: #6B7280;
 }
 
 /* ==========================================================================
