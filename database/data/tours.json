@@ -2012,7 +2012,9 @@
     "category": "Ecoturismo & Selva",
     "country": "peru",
     "featured": false,
-    "image": "/assets/img/tours/Northern-Peru-Tours.webp",
+    "image": "/assets/img/tours/tambopata-peruvian-amazon.webp",
+    "card_image": "/assets/img/tours/tambopata-peruvian-amazon.webp",
+    "hero_image": "/assets/img/tours/tambopata-peruvian-amazon.webp",
     "tagline": "Inmersión profunda en la Reserva Nacional Tambopata con ecolodges galardonados.",
     "overview": "Una aventura ecológica sin igual en el corazón de la cuenca amazónica del río Madre de Dios. Diseñado para amantes de la naturaleza que buscan conectar con la selva primaria con máximo respeto ambiental y confort.",
     "inclusions": [
