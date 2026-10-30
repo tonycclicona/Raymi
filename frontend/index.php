@@ -291,12 +291,12 @@ $signatureTours = [
                 $dCountry = strtolower($d['country'] ?? 'peru');
                 $dFlag = ($dCountry === 'chile') ? '🇨🇱' : '🇵🇪';
             ?>
-                <div class="destination-card" style="background-image: linear-gradient(180deg, rgba(9,12,17,0.2) 0%, rgba(9,12,17,0.95) 100%), url('<?php echo htmlspecialchars($d['image'] ?? ''); ?>');">
+                <div class="destination-card" style="background-image: url('<?php echo htmlspecialchars($d['image'] ?? ''); ?>');">
                     <div class="destination-card-content">
                         <span class="destination-card-country"><?php echo $dFlag . ' ' . strtoupper($dCountry); ?></span>
                         <h3 class="destination-card-title"><?php echo htmlspecialchars($d['name']); ?></h3>
                         <p class="destination-card-subtitle"><?php echo htmlspecialchars($d['subtitle'] ?? ''); ?></p>
-                        <a href="/destination/<?php echo htmlspecialchars($d['slug']); ?>" class="cta-button" style="display:inline-block; padding:8px 16px; font-size:11px; margin-top:10px;">
+                        <a href="/destination/<?php echo htmlspecialchars($d['slug']); ?>" class="cta-button" style="display:inline-block; padding:9px 18px; font-size:11px; margin-top:10px;">
                             Explore Destination →
                         </a>
                     </div>

@@ -93,21 +93,21 @@ include __DIR__ . '/includes/header.php';
                 $dCountry = strtolower($d['country'] ?? 'peru');
                 $dFlag = ($dCountry === 'chile') ? '🇨🇱' : (($dCountry === 'peru') ? '🇵🇪' : '🌎');
             ?>
-                <div class="destination-card dest-item-card" data-country="<?php echo $dCountry; ?>" style="background-image: linear-gradient(180deg, rgba(9,12,17,0.2) 0%, rgba(9,12,17,0.95) 100%), url('<?php echo htmlspecialchars($d['image'] ?? ''); ?>');">
+                <div class="destination-card dest-item-card" data-country="<?php echo $dCountry; ?>" style="background-image: url('<?php echo htmlspecialchars($d['image'] ?? ''); ?>');">
                     <div class="destination-card-content">
                         <span class="destination-card-country"><?php echo $dFlag . ' ' . strtoupper($dCountry); ?></span>
                         <h3 class="destination-card-title"><?php echo htmlspecialchars($d['name']); ?></h3>
                         <p class="destination-card-subtitle"><?php echo htmlspecialchars($d['subtitle'] ?? ''); ?></p>
                         
                         <?php if (!empty($d['highlights']) && is_array($d['highlights'])): ?>
-                            <ul style="list-style:none; padding:0; margin:10px 0 16px; font-size:11px; color:var(--text-secondary); line-height:1.6;">
+                            <ul style="list-style:none; padding:0; margin:10px 0 16px; font-size:12px; color:#F1F5F9; line-height:1.6; text-shadow:0 1px 3px rgba(0,0,0,0.8);">
                                 <?php foreach (array_slice($d['highlights'], 0, 2) as $h): ?>
                                     <li>✦ <?php echo htmlspecialchars($h); ?></li>
                                 <?php endforeach; ?>
                             </ul>
                         <?php endif; ?>
 
-                        <a href="/destination/<?php echo htmlspecialchars($d['slug']); ?>" class="cta-button" style="display:inline-block; padding:8px 16px; font-size:11px;">
+                        <a href="/destination/<?php echo htmlspecialchars($d['slug']); ?>" class="cta-button" style="display:inline-block; padding:9px 18px; font-size:11px;">
                             Explore Destination →
                         </a>
                     </div>

@@ -71,7 +71,7 @@
     "name": "Lima",
     "slug": "lima",
     "subtitle": "Capital gastronómica de las Américas",
-    "image": "https://images.unsplash.com/photo-1531968455001-5c5272a41129?auto=format&fit=crop&w=1600&q=80",
+    "image": "/assets/img/destinations/lima.webp",
     "excerpt": "Encaramada sobre espectaculares acantilados frente al Océano Pacífico, Lima conjuga pirámides de barro preincas, mansiones virreinales y el movimiento culinario más premiado del mundo.",
     "has_form": false,
     "highlights": [

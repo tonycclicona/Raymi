@@ -262,13 +262,15 @@ include __DIR__ . '/includes/header.php';
             });
             $otherDests = array_slice($otherDests, 0, 3);
             foreach ($otherDests as $od):
+                $odCountry = strtolower($od['country'] ?? 'peru');
+                $odFlag = ($odCountry === 'chile') ? '🇨🇱' : (($odCountry === 'peru') ? '🇵🇪' : '🌎');
             ?>
-                <div class="destination-card" style="background-image: linear-gradient(180deg, rgba(9,12,17,0.2) 0%, rgba(9,12,17,0.9) 100%), url('<?php echo htmlspecialchars($od['image'] ?? ''); ?>');">
+                <div class="destination-card" style="background-image: url('<?php echo htmlspecialchars($od['image'] ?? ''); ?>');">
                     <div class="destination-card-content">
-                        <span class="destination-card-country"><?php echo strtoupper($od['country'] ?? ''); ?></span>
+                        <span class="destination-card-country"><?php echo $odFlag . ' ' . strtoupper($od['country'] ?? ''); ?></span>
                         <h3 class="destination-card-title"><?php echo htmlspecialchars($od['name']); ?></h3>
                         <p class="destination-card-subtitle"><?php echo htmlspecialchars($od['subtitle'] ?? ''); ?></p>
-                        <a href="/destination/<?php echo htmlspecialchars($od['slug']); ?>" class="cta-button" style="display:inline-block; padding:8px 14px; font-size:10px; margin-top:10px;">
+                        <a href="/destination/<?php echo htmlspecialchars($od['slug']); ?>" class="cta-button" style="display:inline-block; padding:9px 18px; font-size:11px; margin-top:10px;">
                             Explore Destination →
                         </a>
                     </div>
