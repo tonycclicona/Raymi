@@ -245,10 +245,10 @@ $countryHeroBg = ($isPeru && file_exists(__DIR__ . '/assets/img/heroes/peru-dest
             <span class="section-tag" style="color: var(--gold); font-size: 11px; letter-spacing: 0.25em; text-transform: uppercase; font-weight: 600;">
                 THE UNU RAYMI DIFFERENCE
             </span>
-            <h2 style="font-family: 'Playfair Display', Georgia, serif; font-size: 40px; color: #FFF; margin: 12px 0 16px; font-weight: 400;">
+            <h2 style="font-family: 'Playfair Display', Georgia, serif; font-size: 40px; color: #1D1E20; margin: 12px 0 16px; font-weight: 400;">
                 Why travel with us?
             </h2>
-            <p style="color: rgba(255, 255, 255, 0.8); font-size: 15px; line-height: 1.7;">
+            <p style="color: #55595F; font-size: 15px; line-height: 1.7;">
                 We design every journey around your specific interests, ensuring an authentic connection to the heart and soul of South America. Your travels directly support local Andean communities while you experience the ultimate standard in quiet luxury.
             </p>
         </div>
@@ -532,7 +532,7 @@ $countryHeroBg = ($isPeru && file_exists(__DIR__ . '/assets/img/heroes/peru-dest
             <span class="section-tag" style="color: var(--gold); font-size: 11px; letter-spacing: 0.25em; text-transform: uppercase;">
                 COMBINE SOUTH AMERICAN TERRITORIES
             </span>
-            <h2 style="font-family: 'Playfair Display', Georgia, serif; font-size: 32px; color: #FFF; margin: 10px 0 0; font-weight: 400;">
+            <h2 style="font-family: 'Playfair Display', Georgia, serif; font-size: 32px; color: #1D1E20; margin: 10px 0 0; font-weight: 400;">
                 Explore Other Private Destinations
             </h2>
         </div>
@@ -541,9 +541,9 @@ $countryHeroBg = ($isPeru && file_exists(__DIR__ . '/assets/img/heroes/peru-dest
             <?php foreach ($allCountries as $otherC): 
                 if ($otherC['slug'] === $countrySlug) continue;
             ?>
-                <a href="/destinations/<?php echo $otherC['slug']; ?>" class="highlight-card" style="display:block; text-decoration:none; padding:22px 18px; transition:all 0.3s ease; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); text-align: center; border-radius: 4px;">
+                <a href="/destinations/<?php echo $otherC['slug']; ?>" class="highlight-card" style="display:block; text-decoration:none; padding:22px 18px; transition:all 0.3s ease; background: #FFFFFF; border: 1px solid rgba(0,0,0,0.08); box-shadow: 0 4px 14px rgba(0,0,0,0.03); text-align: center; border-radius: 4px;">
                     <div style="font-size: 28px; margin-bottom: 8px;"><?php echo $otherC['flag']; ?></div>
-                    <h4 style="color:#FFF; font-size: 16px; margin-bottom: 6px; font-family: 'Playfair Display', Georgia, serif;"><?php echo htmlspecialchars($otherC['name']); ?></h4>
+                    <h4 style="color:#1D1E20; font-size: 16px; margin-bottom: 6px; font-family: 'Playfair Display', Georgia, serif;"><?php echo htmlspecialchars($otherC['name']); ?></h4>
                     <span style="font-size: 11px; color: var(--gold); letter-spacing: 0.1em; text-transform: uppercase;">View Itineraries →</span>
                 </a>
             <?php endforeach; ?>

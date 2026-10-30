@@ -98,14 +98,14 @@ include __DIR__ . '/includes/header.php';
                             <p style="font-style:italic; font-size:13px; line-height:1.7; color:var(--text-secondary); margin-bottom:12px;">
                                 "Our journey to Peru and Chile surpassed every expectation. The private access to Machu Picchu with Dr. Mendoza and the thoughtful attention from our host in Cusco were extraordinary."
                             </p>
-                            <strong style="color:#FFF; font-size:12px;">— The Kensington Family, London (United Kingdom)</strong>
+                            <strong style="color:var(--text-primary); font-size:12px;">— The Kensington Family, London (United Kingdom)</strong>
                         </div>
                         <div class="highlight-card" style="display:block;">
                             <div style="color:var(--gold); font-size:16px; margin-bottom:8px;">★★★★★</div>
                             <p style="font-style:italic; font-size:13px; line-height:1.7; color:var(--text-secondary); margin-bottom:12px;">
                                 "The seamless combination of the Atacama Desert and the Sacred Valley was pure magic. Every detail of health, cuisine, and logistics was managed with absolute perfection."
                             </p>
-                            <strong style="color:#FFF; font-size:12px;">— David &amp; Sarah Miller, New York (USA)</strong>
+                            <strong style="color:var(--text-primary); font-size:12px;">— David &amp; Sarah Miller, New York (USA)</strong>
                         </div>
                     </div>
                 </div>

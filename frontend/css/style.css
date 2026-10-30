@@ -1993,12 +1993,13 @@ body:not(.page-home) {
 
 .block-title {
     font-size: 26px;
-    color: #FFF;
+    color: #1D1E20;
     margin-bottom: 20px;
+    font-weight: 600;
 }
 
 .tour-narrative {
-    color: var(--text-secondary);
+    color: #382A30;
     font-size: 15px;
     line-height: 1.8;
     text-align: justify;
@@ -2101,11 +2102,11 @@ body:not(.page-home) {
 .sticky-booking-card {
     position: sticky;
     top: 40px;
-    background: var(--bg-surface-elevated);
-    border: 1px solid var(--border-gold);
+    background: #FFFFFF;
+    border: 1px solid rgba(154, 102, 21, 0.25);
     border-radius: var(--radius-lg);
     padding: 32px 28px;
-    box-shadow: var(--shadow-deep);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
 }
 
 .booking-eyebrow {
@@ -2119,17 +2120,19 @@ body:not(.page-home) {
 
 .booking-tour-name {
     font-size: 20px;
-    color: #FFF;
+    color: #1D1E20;
     margin-bottom: 8px;
     line-height: 1.3;
+    font-weight: 600;
 }
 
 .booking-pricing-notice {
-    font-size: 12px;
-    color: var(--text-muted);
+    font-size: 12.5px;
+    color: #52565C;
     margin-bottom: 24px;
     padding-bottom: 18px;
-    border-bottom: 1px solid var(--border);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    line-height: 1.5;
 }
 
 .form-group-sm {
@@ -2188,7 +2191,8 @@ body:not(.page-home) {
 .trust-guarantee-item strong {
     display: block;
     font-size: 12px;
-    color: #FFF;
+    color: #1D1E20;
+    font-weight: 600;
 }
 
 .trust-guarantee-item span {
@@ -4821,34 +4825,46 @@ h1.sub__title,
     color: #888888 !important;
 }
 
-/* 9. Form Fields Contrast on Dark Backgrounds */
+/* 9. Form Fields Contrast on Light Andean Linen Background */
 .sidebar-lead-form input,
 .sidebar-lead-form select,
 .sidebar-lead-form textarea,
 .form-group-sm input,
 .form-group-sm select,
 .form-group-sm textarea {
-    background: rgba(0, 0, 0, 0.5) !important;
-    color: #FFFFFF !important;
-    border: 1px solid rgba(255, 255, 255, 0.18) !important;
+    background: #FBF9F5 !important;
+    color: #1D1E20 !important;
+    border: 1px solid rgba(0, 0, 0, 0.14) !important;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.02) !important;
+}
+
+.sidebar-lead-form input:focus,
+.sidebar-lead-form select:focus,
+.sidebar-lead-form textarea:focus,
+.form-group-sm input:focus,
+.form-group-sm select:focus,
+.form-group-sm textarea:focus {
+    background: #FFFFFF !important;
+    border-color: #9A6615 !important;
+    box-shadow: 0 0 0 1px #9A6615 !important;
 }
 
 .sidebar-lead-form label,
 .form-group-sm label {
-    color: #D4AF37 !important;
-    font-weight: 500 !important;
+    color: #2D3139 !important;
+    font-weight: 600 !important;
 }
 
 .sidebar-lead-form input::placeholder,
 .sidebar-lead-form textarea::placeholder,
 .form-group-sm input::placeholder,
 .form-group-sm textarea::placeholder {
-    color: rgba(255, 255, 255, 0.45) !important;
+    color: #7E848E !important;
 }
 
 select option {
-    background: #111622 !important;
-    color: #FFFFFF !important;
+    background: #FFFFFF !important;
+    color: #1D1E20 !important;
 }
 
 /* 10. Dropdown Menus Contrast */
@@ -5369,4 +5385,35 @@ textarea.kuoda-lead-input.kuoda-lead-textarea, textarea.unu-lead-input.unu-lead-
 }
 .highlight-card p {
     color: #52565C !important;
+}
+
+
+/* Destination Highlights Grid */
+.highlights-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+}
+.highlights-grid .highlight-card {
+    display: flex !important;
+    align-items: center !important;
+    gap: 14px !important;
+    background: #FFFFFF !important;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+    padding: 16px 20px !important;
+    border-radius: 4px !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03) !important;
+}
+.highlights-grid .highlight-card .highlight-bullet {
+    color: #9A6615 !important;
+    font-size: 14px !important;
+    flex-shrink: 0 !important;
+}
+.highlights-grid .highlight-card p {
+    color: #2B2E33 !important;
+    font-size: 14.5px !important;
+    line-height: 1.6 !important;
+    margin: 0 !important;
+    font-weight: 500 !important;
 }

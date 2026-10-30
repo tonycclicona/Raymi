@@ -247,7 +247,7 @@ include __DIR__ . '/includes/header.php';
 </section>
 
 <!-- Explore Other Destinations -->
-<section class="section" style="background: rgba(0,0,0,0.25); border-top: 1px solid var(--border);">
+<section class="section" style="background: var(--bg-surface-elevated); border-top: 1px solid var(--border);">
     <div class="container">
         <div class="section-header">
             <span class="section-tag">Other Territories</span>

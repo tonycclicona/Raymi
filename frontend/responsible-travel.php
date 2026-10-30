@@ -87,7 +87,7 @@ Because discovering the Andes also means valuing those who keep its essence aliv
         </div>
 
         <div style="text-align: center; margin-top: 48px; padding: 40px; background: rgba(212,175,55,0.06); border: 1px solid var(--border-gold); border-radius: 12px;">
-            <h3 style="color: #FFF; font-size: 24px; margin-bottom: 12px;">Travel with Deeper Meaning</h3>
+            <h3 style="color: var(--text-primary); font-size: 24px; margin-bottom: 12px;">Travel with Deeper Meaning</h3>
             <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto 24px;">
                 Discover how your bespoke journey across South America creates an enduring legacy of gratitude and mutual preservation.
             </p>
