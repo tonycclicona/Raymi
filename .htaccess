@@ -47,12 +47,12 @@ DirectoryIndex index.php frontend/index.php
     RewriteRule ^destinations/?$ destinations.php [L,QSA]
     RewriteRule ^destinations/?$ frontend/destinations.php [L,QSA]
 
-    # 9. Geographic Destination Detail
+    # 9. Geographic Destination Detail (/destination/{slug} or /destinations/{slug})
     RewriteCond %{DOCUMENT_ROOT}/destination.php -f
-    RewriteRule ^destinations?/([a-zA-Z0-9_\-]+)/?$ destination.php?slug=$1 [L,QSA]
-    RewriteRule ^destination/([^/]+)/?$ destination.php?slug=$1 [L,QSA]
-    RewriteRule ^destinations?/([a-zA-Z0-9_\-]+)/?$ frontend/destination.php?slug=$1 [L,QSA]
-    RewriteRule ^destination/([^/]+)/?$ frontend/destination.php?slug=$1 [L,QSA]
+    RewriteRule ^destination/([a-zA-Z0-9_\-]+)/?$ destination.php?slug=$1 [L,QSA]
+    RewriteRule ^destinations/([a-zA-Z0-9_\-]+)/?$ destination.php?slug=$1 [L,QSA]
+    RewriteRule ^destination/([a-zA-Z0-9_\-]+)/?$ frontend/destination.php?slug=$1 [L,QSA]
+    RewriteRule ^destinations/([a-zA-Z0-9_\-]+)/?$ frontend/destination.php?slug=$1 [L,QSA]
 
     # 10. Contact / Custom Journey Planner
     RewriteCond %{DOCUMENT_ROOT}/contact.php -f
