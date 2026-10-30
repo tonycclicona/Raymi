@@ -49,7 +49,7 @@
     "name": "Valle Sagrado de los Incas",
     "slug": "sacred-valley",
     "subtitle": "Serenidad andina y herencia viva",
-    "image": "https://images.unsplash.com/photo-1589556264800-08ae9e129a8c?auto=format&fit=crop&w=1600&q=80",
+    "image": "/assets/img/destinations/sacred-valley.webp",
     "excerpt": "Un valle fecundo flanqueado por colosos nevados, salpicado de terrazas agrícolas milenarias, mercados indígenas multicolores y resorts de descanso a menor altitud.",
     "has_form": false,
     "highlights": [
@@ -92,7 +92,7 @@
     "name": "Puno & Lago Titicaca",
     "slug": "puno-lake-titicaca",
     "subtitle": "Cuna mitológica del Imperio del Sol",
-    "image": "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=1600&q=80",
+    "image": "/assets/img/destinations/puno-lake-titicaca.webp",
     "excerpt": "El lago navegable más alto del mundo, cuna de leyendas sagradas, islas flotantes de totora tejidas a mano y una serenidad celestial a 3,812 metros de altitud.",
     "has_form": false,
     "highlights": [
@@ -113,7 +113,7 @@
     "name": "Arequipa & Cañón del Colca",
     "slug": "arequipa-colca-canyon",
     "subtitle": "La Ciudad Blanca y el reino de los cóndores",
-    "image": "https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=1600&q=80",
+    "image": "/assets/img/destinations/arequipa-colca-canyon.webp",
     "excerpt": "Arquitectura colonial tallada en sillar volcánico blanco, cielos zafiro impecables, picanterías centenarias y uno de los cañones más profundos del planeta.",
     "has_form": false,
     "highlights": [
@@ -133,7 +133,7 @@
     "name": "Iquitos & Río Amazonas",
     "slug": "iquitos-the-amazon-river",
     "subtitle": "El lujo indómito de la gran selva virgen",
-    "image": "https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1600&q=80",
+    "image": "/assets/img/destinations/iquitos-the-amazon-river.webp",
     "excerpt": "Navegue las aguas del mítico río Amazonas a bordo de exclusivos cruceros boutique de expedición, rodeado de selva primaria impenetrable y una biodiversidad insuperable.",
     "has_form": false,
     "highlights": [
@@ -153,7 +153,7 @@
     "name": "Ica, Nazca & Paracas",
     "slug": "ica-nazca-paracas",
     "subtitle": "Enigmas en el desierto y santuarios marinos",
-    "image": "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=1600&q=80",
+    "image": "/assets/img/destinations/ica-nazca-paracas.webp",
     "excerpt": "Dunas doradas que caen al mar, misteriosos geoglifos milenarios grabados en la arena, viñedos de pisco artesanal y las Islas Ballestas repletas de fauna marina.",
     "has_form": false,
     "highlights": [
@@ -173,7 +173,7 @@
     "name": "Trujillo & Chiclayo",
     "slug": "trujillo-chiclayo",
     "subtitle": "Tesoros mochicas, chimúes y el Señor de Sipán",
-    "image": "https://images.unsplash.com/photo-1580619305218-8423a7ef79b4?auto=format&fit=crop&w=1600&q=80",
+    "image": "/assets/img/destinations/trujillo-chiclayo.webp",
     "excerpt": "La ruta de los reinos dorados de la costa norte: la colosal ciudadela de barro de Chan Chan, las pirámides del Sol y la Luna, y la impresionante tumba real del Señor de Sipán.",
     "has_form": false,
     "highlights": [
@@ -192,7 +192,7 @@
     "name": "Chachapoyas & Kuélap",
     "slug": "chachapoyas-kuelap",
     "subtitle": "La fortaleza en las nubes y bosques de neblina",
-    "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80",
+    "image": "/assets/img/destinations/chachapoyas-kuelap.webp",
     "excerpt": "En el límite entre los Andes y la selva amazónica se alzan las ciclópeas murallas de Kuélap y la gigantesca catarata de Gocta, cuna de los indómitos Guerreros de las Nubes.",
     "has_form": false,
     "highlights": [
@@ -211,7 +211,7 @@
     "name": "Ruta Arqueológica del Norte",
     "slug": "northern-peru-tours",
     "subtitle": "Circuito integral de reinos preincas",
-    "image": "https://images.unsplash.com/photo-1580619305218-8423a7ef79b4?auto=format&fit=crop&w=1600&q=80",
+    "image": "/assets/img/destinations/northern-peru-tours.webp",
     "excerpt": "La gran travesía cultural de 11 días que une Trujillo, Chiclayo y Cajamarca. Un viaje a través de milenios de civilizaciones con landing de captación directa.",
     "has_form": true,
     "highlights": [
@@ -415,7 +415,7 @@
     "name": "Valparaíso",
     "slug": "valparaiso",
     "subtitle": "La joya bohemia y colorida del Pacífico",
-    "image": "https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=1600&q=80",
+    "image": "https://images.unsplash.com/photo-1490782300182-697b80ad4293?auto=format&fit=crop&w=1600&q=80",
     "excerpt": "Cerros salpicados de casonas victorianas de colores, ascensores de madera centenarios, murales de street art reconocidos internacionalmente y la casa museo de Pablo Neruda.",
     "has_form": false,
     "highlights": [
@@ -434,7 +434,7 @@
     "name": "Puerto Varas & Distrito de los Lagos",
     "slug": "puerto-varas",
     "subtitle": "La ciudad de las rosas frente al Volcán Osorno",
-    "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80",
+    "image": "https://images.unsplash.com/photo-1547477220-af5cefed3bcf?auto=format&fit=crop&w=1600&q=80",
     "excerpt": "Rodeada de bosques lluviosos templados, lagos de color esmeralda y el cono perfecto del Volcán Osorno, fusiona herencia colonizadora germana y tradiciones del sur de Chile.",
     "has_form": false,
     "highlights": [
