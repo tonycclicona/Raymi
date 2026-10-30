@@ -136,7 +136,7 @@ include __DIR__ . '/includes/header.php';
                     </div>
                 </div>
 
-                <a href="https://wa.me/51915082539?text=Hello%20Unu%20Raymi,%20I%20would%20like%20information%20for%20a%20bespoke%20luxury%20journey" target="_blank" rel="noopener noreferrer" class="btn-hero-outline" style="width: 100%; justify-content: center; margin-top: 20px; font-size: 11px;">
+                <a href="https://wa.me/51915082539?text=Hello%20Unu%20Raymi,%20I%20would%20like%20information%20for%20a%20bespoke%20luxury%20journey" target="_blank" rel="noopener noreferrer" class="cta-button" style="width: 100%; display: flex; justify-content: center; align-items: center; margin-top: 20px; font-size: 11px; padding: 12px 20px;">
                     Chat on WhatsApp ↗
                 </a>
             </div>
