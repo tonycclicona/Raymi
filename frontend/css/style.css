@@ -1569,7 +1569,7 @@ body:not(.page-home) {
     color: var(--text-secondary);
     font-size: 14px;
     line-height: 1.7;
-    background: rgba(0, 0, 0, 0.2);
+    background: #F8F5F2;
 }
 
 .accordion-item.open .accordion-content {
@@ -1701,11 +1701,11 @@ body:not(.page-home) {
    TOP ANNOUNCEMENT BAR & GLOBAL SUBPAGE STYLES (Unu Raymi luxury standard)
    ========================================================================== */
 .top-announcement-bar {
-    background: #040608;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    background: #F3EEEA;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
     padding: 8px 0;
     font-size: 12px;
-    color: var(--text-muted);
+    color: #52565C;
     position: relative;
     z-index: 502;
 }
@@ -2475,8 +2475,8 @@ select.form-control {
 }
 
 select.form-control option {
-    background: #0E131F;
-    color: #FFFFFF;
+    background: #FFFFFF;
+    color: #1D1E20;
     padding: 12px;
 }
 
@@ -2689,9 +2689,9 @@ textarea.form-control {
     width: 320px;
     max-width: 86vw;
     height: 100vh;
-    background: #090C11;
-    border-left: 1px solid var(--border-gold);
-    box-shadow: -15px 0 45px rgba(0, 0, 0, 0.85);
+    background: #FFFFFF;
+    border-left: 1px solid rgba(154, 102, 21, 0.25);
+    box-shadow: -15px 0 45px rgba(0, 0, 0, 0.15);
     z-index: 1999;
     display: flex;
     flex-direction: column;
@@ -2751,16 +2751,16 @@ textarea.form-control {
 }
 
 .mobile-nav-link {
-    color: var(--sand);
+    color: #1D1E20;
     text-decoration: none;
     font-size: 14px;
     padding: 8px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
     transition: color 0.2s ease, transform 0.2s ease;
 }
 
 .mobile-nav-link:hover {
-    color: var(--gold-light);
+    color: #9A6615;
     transform: translateX(4px);
 }
 
@@ -3991,10 +3991,10 @@ textarea.form-control {
 
 /* Purpose Section */
 .dest-purpose-section {
-    background: #111622;
-    color: #FFF;
+    background: #F3EEEA;
+    color: #1D1E20;
     padding: 90px 0 80px;
-    border-top: 1px solid rgba(255,255,255,0.08);
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
 }
 .dest-purpose-box {
     max-width: 920px;
@@ -5173,12 +5173,14 @@ form button[type="submit"].cta-button,
     }
 }
 /* ==========================================================================
-   Unu Raymi Bespoke Trip Planner Lead Section
+   Unu Raymi Bespoke Trip Planner Lead Section (Light Andean Linen Theme)
    ========================================================================== */
 .kuoda-lead-section, .unu-lead-section {
-    background-color: #44313A !important;
+    background-color: #F3EEEA !important;
+    border-top: 1px solid rgba(154, 102, 21, 0.22);
+    border-bottom: 1px solid rgba(154, 102, 21, 0.15);
     padding: 70px 24px 80px !important;
-    color: #FFFFFF !important;
+    color: #1D1E20 !important;
     width: 100%;
     box-sizing: border-box;
 }
@@ -5192,10 +5194,10 @@ form button[type="submit"].cta-button,
 .kuoda-lead-title, .unu-lead-title {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
     font-size: 20px !important;
-    font-weight: 400 !important;
+    font-weight: 500 !important;
     line-height: 1.45 !important;
     text-align: center !important;
-    color: #FFFFFF !important;
+    color: #1D1E20 !important;
     max-width: 860px;
     margin: 0 auto 34px !important;
     letter-spacing: 0.01em;
@@ -5223,27 +5225,28 @@ form button[type="submit"].cta-button,
 .kuoda-lead-input, .unu-lead-input {
     width: 100%;
     height: 46px;
-    background-color: #F5F3F1 !important;
-    border: 1px solid #ECEAE6 !important;
-    border-radius: 2px !important;
+    background-color: #FFFFFF !important;
+    border: 1px solid rgba(0, 0, 0, 0.12) !important;
+    border-radius: 4px !important;
     padding: 0 14px !important;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
     font-size: 13.5px !important;
-    color: #2B2528 !important;
+    color: #1D1E20 !important;
     box-sizing: border-box !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02) !important;
     transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .kuoda-lead-input::placeholder, .unu-lead-input::placeholder {
-    color: #706B6E !important;
+    color: #7E848E !important;
     opacity: 1 !important;
 }
 
 .kuoda-lead-input:focus, .unu-lead-input:focus {
     outline: none !important;
     background-color: #FFFFFF !important;
-    border-color: #D4AF37 !important;
-    box-shadow: 0 0 0 1px #D4AF37 !important;
+    border-color: #9A6615 !important;
+    box-shadow: 0 0 0 2px rgba(154, 102, 21, 0.2) !important;
 }
 
 select.kuoda-lead-input, select.unu-lead-input {
@@ -5259,14 +5262,14 @@ select.kuoda-lead-input, select.unu-lead-input {
 }
 
 select.kuoda-lead-input option, select.unu-lead-input option {
-    color: #222222 !important;
+    color: #1D1E20 !important;
     background-color: #FFFFFF !important;
     padding: 8px 12px !important;
 }
 
 select.kuoda-lead-input option:disabled, select.unu-lead-input option:disabled,
 select.kuoda-lead-input option[value=""], select.unu-lead-input option[value=""] {
-    color: #706B6E !important;
+    color: #7E848E !important;
 }
 
 textarea.kuoda-lead-input.kuoda-lead-textarea, textarea.unu-lead-input.unu-lead-textarea {
@@ -5284,31 +5287,30 @@ textarea.kuoda-lead-input.kuoda-lead-textarea, textarea.unu-lead-input.unu-lead-
 
 .kuoda-lead-submit-btn, .unu-lead-submit-btn {
     display: inline-block !important;
-    min-width: 140px !important;
-    max-width: 180px !important;
-    height: 42px !important;
-    line-height: 42px !important;
+    min-width: 160px !important;
+    height: 44px !important;
+    line-height: 44px !important;
     padding: 0 36px !important;
-    background-color: #FFFFFF !important;
-    color: #44313A !important;
+    background-color: #9A6615 !important;
+    color: #FFFFFF !important;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
     font-size: 14px !important;
-    font-weight: 500 !important;
+    font-weight: 600 !important;
     border: none !important;
-    border-radius: 2px !important;
+    border-radius: 4px !important;
     cursor: pointer !important;
     text-align: center !important;
-    transition: all 0.2s ease !important;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12) !important;
-    text-transform: none !important;
-    letter-spacing: normal !important;
+    transition: all 0.25s ease !important;
+    box-shadow: 0 4px 14px rgba(154, 102, 21, 0.25) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.08em !important;
 }
 
 .kuoda-lead-submit-btn:hover, .unu-lead-submit-btn:hover {
-    background-color: #EFECE9 !important;
-    color: #2B1E24 !important;
-    transform: translateY(-1px);
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2) !important;
+    background-color: #704709 !important;
+    color: #FFFFFF !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(154, 102, 21, 0.35) !important;
 }
 
 .kuoda-lead-submit-btn:disabled, .unu-lead-submit-btn:disabled {

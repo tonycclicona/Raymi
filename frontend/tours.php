@@ -199,7 +199,7 @@ include __DIR__ . '/includes/header.php';
 </section>
 
 <!-- Custom Tailor-Made Journey Callout -->
-<section class="section" style="background: linear-gradient(180deg, rgba(17,22,34,0.6) 0%, rgba(9,12,17,0.95) 100%); border-top: 1px solid var(--border); text-align: center;">
+<section class="section" style="background: var(--bg-surface-elevated); border-top: 1px solid var(--border); text-align: center;">
     <div class="container" style="max-width: 800px;">
         <span class="section-tag">Looking for something completely unique?</span>
         <h2 class="section-title" style="margin-bottom: 16px;">Design Your 100% Tailor-Made Journey</h2>
